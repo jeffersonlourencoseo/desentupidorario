@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+
+# Arquivo de referência para crawlers de IA
+LLMs-full-text: https://desentupidorario.vercel.app/llms.txt
+
 Sitemap: https://desentupidorario.vercel.app/sitemap-index.xml

@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import Button from '../components/Button.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import SchemaBreadcrumbs from '../components/seo/SchemaBreadcrumbs.astro';
+import SchemaFAQPage from '../components/seo/SchemaFAQPage.astro';
+import { whatsappLink, phoneLink, SITE_CONFIG } from '../data/config.ts';
+
+const breadcrumbs = [
+  { name: 'Início', url: '/' },
+  { name: 'Perguntas Frequentes', url: '/perguntas-frequentes/', current: true },
+];
+
+const faqs = [
+  {
+    question: 'Quanto custa chamar uma desentupidora no Rio de Janeiro?',
+    answer: 'A Desentupidora Rio de Janeiro faz orçamento grátis e sem compromisso. O valor depende do tipo de entupimento, local da visita e complexidade do serviço. Você só paga se executar.',
+  },
+  {
+    question: 'A desentupidora atende em qualquer horário?',
+    answer: 'Sim. O atendimento é 24 horas por dia, todos os dias da semana, inclusive feriados. Entupimento não avisa, por isso mantemos equipes de prontidão.',
+  },
+  {
+    question: 'A empresa atende em toda a cidade do Rio?',
+    answer: 'Sim. Atendemos residências, comércios, condomínios e indústrias em todas as regiões do Rio de Janeiro, com equipes espalhadas por todas as zonas da cidade.',
+  },
+  {
+    question: 'Qual o telefone e WhatsApp da Desentupidora Rio de Janeiro?',
+    answer: `O telefone e WhatsApp é ${SITE_CONFIG.phone.replace('+55', '').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3')}. Você pode chamar direto pelo WhatsApp ou ligar a qualquer hora.`,
+  },
+  {
+    question: 'Quais os principais sinais de que preciso chamar uma desentupidora?',
+    answer: 'Esgoto voltando pela caixa de inspeção ou ralo, mau cheiro persistente em banheiros, descarga fraca, água descendo lentamente em pias ou ralos, e vaso sanitário próximo de transbordar.',
+  },
+  {
+    question: 'A limpeza de fossa pode ser feita em restaurantes e condomínios?',
+    answer: 'Sim. Fazemos limpeza, sucção e manutenção de fossa e caixa de gordura para residências, restaurantes, comércios e condomínios no Rio de Janeiro.',
+  },
+  {
+    question: 'O serviço tem garantia?',
+    answer: 'Sim. Oferecemos garantia no serviço. Se o problema persistir, voltamos para reajustar sem custo extra. Nossa palavra é compromisso de verdade.',
+  },
+  {
+    question: 'Qual o endereço da Desentupidora Rio de Janeiro?',
+    answer: `A sede fica em ${SITE_CONFIG.fullAddress}. Atuamos em toda a cidade do Rio de Janeiro com deslocamento de equipes para o local do cliente.`,
+  },
+];
+---
+
+<Layout
+  title="Perguntas Frequentes"
+  description="Tire suas dúvidas sobre desentupimento no Rio de Janeiro. Atendimento 24h, orçamento grátis e serviço com garantia.">
+
+  <SchemaBreadcrumbs items={breadcrumbs} />
+  <Breadcrumbs items={breadcrumbs} />
+
+  <SchemaFAQPage faqs={faqs} />
+
+  <section class="py-24 md:py-32">
+    <div class="container mx-auto px-6 lg:px-12">
+      <PageHeader
+        eyebrow="Dúvidas"
+        title="Perguntas Frequentes"
+        description="Respostas diretas sobre desentupimento, limpeza de fossa, caixa de gordura e atendimento 24h no Rio de Janeiro."
+      />
+
+      <div class="mx-auto max-w-4xl space-y-6">
+        {faqs.map((faq, index) => (
+          <article class="border-2 border-steel bg-white p-8 shadow-[6px_6px_0px_0px_rgba(225,231,236,1)]">
+            <h2 class="font-display text-xl uppercase tracking-wide text-ink md:text-2xl" id={`faq-${index}`}>
+              {faq.question}
+            </h2>
+            <p class="mt-4 leading-relaxed text-muted">
+              {faq.answer}
+            </p>
+          </article>
+        ))}
+      </div>
+
+      <div class="mt-16 border-4 border-white bg-ink p-12 text-center text-white shadow-[12px_12px_0px_0px_rgba(217,92,30,1)] md:p-16">
+        <h2 class="font-display text-4xl uppercase leading-[0.9] tracking-wide md:text-5xl">
+          Ainda tem dúvidas?
+        </h2>
+        <p class="mx-auto mt-6 max-w-2xl text-lg text-white/80">
+          Fale com a gente pelo WhatsApp. Respondemos em minutos e atendemos emergências 24h no Rio de Janeiro.
+        </p>
+        <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <Button href={whatsappLink()} variant="secondary" size="lg" target="_blank" rel="noopener noreferrer">
+            Chamar no WhatsApp
+          </Button>
+          <Button href={phoneLink()} variant="outline" size="lg">
+            Ligar: {SITE_CONFIG.phone.replace('+55', '').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3')}
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
