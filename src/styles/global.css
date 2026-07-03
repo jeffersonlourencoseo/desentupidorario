@@ -2,29 +2,63 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bebas Neue", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Sora", ui-sans-serif, system-ui, sans-serif;
 
-  --color-primary: #0F4C81;
-  --color-primary-50: #E6F0F8;
-  --color-primary-100: #C2D9EF;
-  --color-primary-600: #0B3A63;
-  --color-primary-700: #082A49;
+  --color-ink: #0A1628;
+  --color-ink-50: #E7EAEE;
+  --color-ink-100: #C5CDD8;
+  --color-ink-700: #111E33;
+  --color-ink-800: #0D1424;
+  --color-ink-900: #0A1628;
 
-  --color-secondary: #00B8A9;
-  --color-secondary-50: #E0F7F5;
-  --color-secondary-100: #B3EDE7;
-  --color-secondary-600: #008F83;
-  --color-secondary-700: #006B62;
+  --color-alert: #FF6B00;
+  --color-alert-50: #FFF0E6;
+  --color-alert-100: #FFD9C2;
+  --color-alert-600: #E55F00;
+  --color-alert-700: #B34A00;
 
-  --color-accent: #FF6B35;
-  --color-accent-50: #FFEDE6;
-  --color-accent-100: #FFD1C2;
-  --color-accent-600: #E55A2B;
-  --color-accent-700: #B8461F;
+  --color-signal: #FFD200;
+  --color-signal-50: #FFF9E0;
+  --color-signal-100: #FFF0B3;
 
-  --color-dark: #0A192F;
-  --color-light: #F8FAFC;
-  --color-text: #1E293B;
-  --color-muted: #64748B;
+  --color-steel: #E5E7EB;
+  --color-steel-100: #D1D5DB;
+  --color-steel-600: #6B7280;
+
+  --color-concrete: #F3F4F6;
+  --color-paper: #FFFFFF;
+  --color-text: #111827;
+  --color-muted: #4B5563;
+
+  /* aliases para compatibilidade com componentes antigos */
+  --color-primary: #0A1628;
+  --color-primary-50: #E7EAEE;
+  --color-primary-100: #C5CDD8;
+  --color-primary-600: #111E33;
+  --color-primary-700: #0D1424;
+
+  --color-secondary: #FF6B00;
+  --color-secondary-50: #FFF0E6;
+  --color-secondary-100: #FFD9C2;
+  --color-secondary-600: #E55F00;
+  --color-secondary-700: #B34A00;
+
+  --color-accent: #FFD200;
+  --color-accent-50: #FFF9E0;
+  --color-accent-100: #FFF0B3;
+  --color-accent-600: #E5BD00;
+  --color-accent-700: #B29300;
+
+  --color-dark: #0A1628;
+  --color-light: #F3F4F6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: var(--color-alert);
+  color: white;
 }

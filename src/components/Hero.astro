@@ -3,63 +3,88 @@ import Button from './Button.astro';
 import { whatsappLink } from '../data/config.ts';
 ---
 
-<section class="relative overflow-hidden bg-primary py-24 text-white md:py-32">
+<section class="relative overflow-hidden bg-ink py-20 text-white md:py-28">
+  <!-- Padrão de grade / tubulação -->
   <div class="absolute inset-0 opacity-10" aria-hidden="true">
-    <svg class="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <svg class="h-full w-full" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <pattern id="wave" width="10" height="10" patternUnits="userSpaceOnUse">
-          <path d="M0 5 Q2.5 0 5 5 T10 5" fill="none" stroke="currentColor" stroke-width="0.5" />
+        <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+          <path d="M 60 0 L 0 0 0 60" fill="none" stroke="currentColor" stroke-width="1" />
         </pattern>
       </defs>
-      <rect width="100%" height="100%" fill="url(#wave)" />
+      <rect width="100%" height="100%" fill="url(#grid)" />
     </svg>
   </div>
 
+  <!-- Faixa diagonal alerta -->
+  <div class="absolute -right-20 top-0 h-[140%] w-32 -rotate-12 bg-alert/80 md:w-48" aria-hidden="true"></div>
+  <div class="absolute -left-10 bottom-0 h-48 w-[140%] -rotate-6 bg-signal/10 md:h-64" aria-hidden="true"></div>
+
   <div class="container relative mx-auto px-6 lg:px-12">
-    <div class="max-w-3xl">
-      <div class="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold backdrop-blur-sm">
-        <span class="h-2 w-2 rounded-full bg-secondary animate-pulse"></span>
-        Atendimento 24h no Rio de Janeiro
+    <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+      <div class="max-w-2xl">
+        <div class="mb-6 inline-flex items-center gap-3 border-2 border-signal bg-signal/10 px-4 py-2">
+          <span class="h-3 w-3 animate-pulse bg-alert"></span>
+          <span class="text-sm font-bold uppercase tracking-wider text-signal">Atendimento 24h no Rio</span>
+        </div>
+
+        <h1 class="font-display text-6xl font-normal uppercase leading-[0.9] tracking-wide md:text-8xl">
+          Desentupidora
+          <span class="block text-alert">Rio de Janeiro</span>
+        </h1>
+
+        <p class="mt-8 max-w-xl text-lg leading-relaxed text-white/80 md:text-xl">
+          Resolvemos entupimentos de esgoto, canos, pias, ralos, vasos sanitários, fossas e caixas de gordura.
+          Chegamos rápido em toda a cidade, com orçamento grátis e garantia no serviço.
+        </p>
+
+        <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+          <Button href={whatsappLink()} variant="secondary" size="lg" target="_blank" rel="noopener noreferrer">
+            Chamar no WhatsApp
+          </Button>
+          <Button href="/servicos/" variant="outline" size="lg">
+            Ver Serviços
+          </Button>
+        </div>
       </div>
 
-      <h1 class="font-display text-4xl font-extrabold leading-tight md:text-6xl">
-        Desentupidora no Rio de Janeiro
-      </h1>
+      <div class="relative">
+        <div class="absolute -inset-4 border-2 border-alert/30 md:-inset-6"></div>
+        <div class="relative border-4 border-white bg-white p-8 text-ink shadow-[12px_12px_0px_0px_rgba(255,107,0,1)] md:p-12">
+          <div class="mb-6 flex items-center gap-3">
+            <span class="flex h-10 w-10 items-center justify-center bg-alert text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </span>
+            <span class="font-display text-2xl uppercase tracking-wide">Emergência 24h</span>
+          </div>
 
-      <p class="mt-6 text-lg leading-relaxed text-primary-50 md:text-xl">
-        Resolvemos entupimentos de esgoto, canos, pias, ralos, vasos sanitários,
-        fossas e caixas de gordura. Chegamos rápido em toda a cidade, com
-        orçamento grátis e garantia no serviço.
-      </p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <span class="mt-1 text-alert">✓</span>
+              <span class="font-body text-muted">Atendimento em toda a cidade do Rio</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="mt-1 text-alert">✓</span>
+              <span class="font-body text-muted">Orçamento grátis antes de executar</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="mt-1 text-alert">✓</span>
+              <span class="font-body text-muted">Equipamento profissional para cada caso</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="mt-1 text-alert">✓</span>
+              <span class="font-body text-muted">Garantia real no serviço feito</span>
+            </div>
+          </div>
 
-      <div class="mt-10 flex flex-col gap-4 sm:flex-row">
-        <Button href={whatsappLink()} variant="accent" size="lg" target="_blank" rel="noopener noreferrer">
-          Chamar no WhatsApp
-        </Button>
-        <Button href="/servicos/" variant="outline" size="lg">
-          Ver nossos serviços
-        </Button>
-      </div>
-
-      <div class="mt-12 flex flex-wrap gap-8 text-sm font-semibold text-primary-100">
-        <div class="flex items-center gap-2">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-          </svg>
-          Garantia no serviço
-        </div>
-        <div class="flex items-center gap-2">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="10" />
-            <polyline points="12 6 12 12 16 14" />
-          </svg>
-          Atendimento rápido
-        </div>
-        <div class="flex items-center gap-2">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M12 2v20M2 12h20" />
-          </svg>
-          Orçamento grátis
+          <div class="mt-8 border-t-2 border-steel pt-6">
+            <div class="font-body text-sm font-bold uppercase tracking-wide text-muted">WhatsApp</div>
+            <a href={whatsappLink()} class="mt-1 block font-display text-4xl text-alert transition-colors hover:text-alert-600">
+              (21) 99775-1577
+            </a>
+          </div>
         </div>
       </div>
     </div>

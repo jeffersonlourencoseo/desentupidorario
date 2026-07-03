@@ -37,22 +37,22 @@ const values = [
   {
     title: 'Honestidade',
     text: 'Orçamento claro antes de começar. Você só paga quando o serviço é executado.',
-    svg: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>',
+    svg: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>',
   },
   {
     title: 'Rapidez',
     text: 'Entupimento não avisa. Por isso chegamos rápido, em qualquer horário e em qualquer bairro do Rio.',
-    svg: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
+    svg: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
   },
   {
     title: 'Limpeza',
     text: 'Usamos equipamento adequado e protegemos o local. Ao final, deixamos tudo limpo e organizado.',
-    svg: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>',
+    svg: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>',
   },
   {
     title: 'Garantia',
     text: 'Se o problema persistir, voltamos sem custo extra. Nossa palavra é compromisso de verdade.',
-    svg: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>',
+    svg: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>',
   },
 ];
 
@@ -67,26 +67,36 @@ const team = [
   title="Quem Somos | Desentupidora Rio de Janeiro"
   description="Conheça a Desentupidora Rio de Janeiro. Anos de experiência, atendimento 24h em toda a cidade e compromisso real com cada cliente.">
 
-  <!-- Hero assimétrico -->
-  <section class="relative overflow-hidden bg-primary py-24 text-white md:py-32">
-    <div class="absolute -right-20 -top-20 h-96 w-96 rounded-full bg-white/5 blur-3xl" aria-hidden="true"></div>
-    <div class="absolute -left-20 bottom-0 h-72 w-72 rounded-full bg-secondary/20 blur-3xl" aria-hidden="true"></div>
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-ink py-24 text-white md:py-32">
+    <div class="absolute inset-0 opacity-10" aria-hidden="true">
+      <svg class="h-full w-full" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="grid-quem" width="60" height="60" patternUnits="userSpaceOnUse">
+            <path d="M 60 0 L 0 0 0 60" fill="none" stroke="currentColor" stroke-width="1" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid-quem)" />
+      </svg>
+    </div>
+    <div class="absolute -right-20 top-0 h-[140%] w-32 -rotate-12 bg-alert/80 md:w-48" aria-hidden="true"></div>
 
     <div class="container relative mx-auto px-6 lg:px-12">
       <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
         <div class="max-w-xl">
-          <span class="mb-4 inline-block rounded-full bg-white/10 px-4 py-2 text-sm font-semibold tracking-wide backdrop-blur-sm">
+          <span class="mb-4 inline-flex items-center gap-3 border-2 border-signal bg-signal/10 px-4 py-2 text-sm font-bold uppercase tracking-wide text-signal">
             Quem Somos
           </span>
-          <h1 class="font-display text-4xl font-extrabold leading-tight md:text-6xl">
-            A desentupidora que o Rio de Janeiro confia
+          <h1 class="font-display text-6xl uppercase leading-[0.9] tracking-wide md:text-8xl">
+            Quem
+            <span class="block text-alert">Somos</span>
           </h1>
-          <p class="mt-6 text-lg leading-relaxed text-primary-50 md:text-xl">
+          <p class="mt-6 text-lg leading-relaxed text-white/80 md:text-xl">
             Desentupimento com gente de verdade, equipamento de verdade e garantia de verdade.
             Atuamos 24 horas por dia em toda a cidade do Rio de Janeiro.
           </p>
           <div class="mt-10 flex flex-col gap-4 sm:flex-row">
-            <Button href={whatsappLink()} variant="accent" size="lg" target="_blank" rel="noopener noreferrer">
+            <Button href={whatsappLink()} variant="secondary" size="lg" target="_blank" rel="noopener noreferrer">
               Chamar no WhatsApp
             </Button>
             <Button href="/servicos/" variant="outline" size="lg">
@@ -96,18 +106,16 @@ const team = [
         </div>
 
         <div class="relative">
-          <div class="absolute inset-0 -rotate-3 rounded-3xl bg-accent/30"></div>
-          <div class="relative rounded-3xl bg-white p-10 text-text shadow-2xl md:p-14">
-            <blockquote class="font-display text-2xl font-bold leading-snug md:text-3xl">
-              "Chegar rápido, resolver de verdade e deixar o local limpo. Esse é o nosso jeito."
+          <div class="absolute -inset-4 border-2 border-alert/30"></div>
+          <div class="relative border-4 border-white bg-white p-10 text-ink shadow-[12px_12px_0px_0px_rgba(255,107,0,1)] md:p-14">
+            <blockquote class="font-display text-2xl uppercase leading-snug tracking-wide md:text-3xl">
+              "Chegar rápido, resolver de verdade e deixar o local limpo."
             </blockquote>
             <div class="mt-8 flex items-center gap-4">
-              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary font-display font-bold text-white">
-                DR
-              </div>
+              <div class="flex h-12 w-12 items-center justify-center border-2 border-ink bg-ink font-display text-xl text-white">DR</div>
               <div>
-                <div class="font-bold text-text">Equipe Desentupidora RJ</div>
-                <div class="text-sm text-muted">Rio de Janeiro</div>
+                <div class="font-bold text-ink">Equipe Desentupidora RJ</div>
+                <div class="text-sm font-bold uppercase tracking-wider text-muted">Rio de Janeiro</div>
               </div>
             </div>
           </div>
@@ -117,13 +125,13 @@ const team = [
   </section>
 
   <!-- Estatísticas -->
-  <section class="border-y border-primary-100 bg-light py-16">
+  <section class="border-y-4 border-steel bg-signal py-16">
     <div class="container mx-auto px-6 lg:px-12">
       <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
         {stats.map((item) => (
           <div class="text-center">
-            <div class="font-display text-5xl font-extrabold text-primary md:text-6xl">{item.value}</div>
-            <div class="mt-2 text-sm font-semibold uppercase tracking-wider text-muted">{item.label}</div>
+            <div class="font-display text-5xl uppercase leading-none text-ink md:text-6xl">{item.value}</div>
+            <div class="mt-2 text-sm font-bold uppercase tracking-wider text-ink/70">{item.label}</div>
           </div>
         ))}
       </div>
@@ -134,28 +142,25 @@ const team = [
   <section class="py-24 md:py-32">
     <div class="container mx-auto px-6 lg:px-12">
       <div class="mb-16 max-w-3xl">
-        <span class="mb-3 block text-sm font-bold tracking-wider text-primary-700 uppercase">Nossa história</span>
-        <h2 class="font-display text-3xl font-bold text-text md:text-4xl">
-          De pequena equipe a referência no Rio
+        <span class="mb-4 inline-block border-2 border-alert bg-alert px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">Nossa história</span>
+        <h2 class="font-display text-5xl uppercase leading-[0.9] tracking-wide text-ink md:text-6xl">
+          De pequena equipe a referência
         </h2>
-        <p class="mt-4 text-lg text-muted">
-          Nascemos da vontade de fazer diferente: resolver entupimentos sem enrolação e sem surpresa no preço.
-        </p>
       </div>
 
       <div class="relative">
-        <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-primary-100 md:left-1/2 md:-ml-px"></div>
+        <div class="absolute left-4 top-0 bottom-0 w-1 bg-steel md:left-1/2 md:-ml-0.5"></div>
         {timeline.map((item, index) => (
-          <div class={`relative mb-12 md:grid md:grid-cols-2 md:gap-12 ${index % 2 === 0 ? '' : 'md:text-right'}`}>
-            <div class={`pl-12 md:pl-0 ${index % 2 === 0 ? 'md:pr-12' : 'md:order-2 md:pl-12'}`}>
-              <span class="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white md:left-1/2 md:-ml-4">
+          <div class={`relative mb-14 md:grid md:grid-cols-2 md:gap-12 ${index % 2 === 0 ? '' : 'md:text-right'}`}>
+            <div class={`pl-14 md:pl-0 ${index % 2 === 0 ? 'md:pr-12' : 'md:order-2 md:pl-12'}`}>
+              <span class="absolute left-0 top-0 flex h-9 w-9 items-center justify-center border-2 border-ink bg-alert text-sm font-bold text-white md:left-1/2 md:-ml-4.5">
                 {index + 1}
               </span>
-              <div class="inline-block rounded-full bg-primary-50 px-3 py-1 text-sm font-bold text-primary">
+              <div class="inline-block border-2 border-ink bg-ink px-3 py-1 text-sm font-bold uppercase tracking-wider text-white">
                 {item.year}
               </div>
-              <h3 class="mt-3 font-display text-xl font-bold text-text">{item.title}</h3>
-              <p class="mt-2 text-muted leading-relaxed">{item.text}</p>
+              <h3 class="mt-3 font-display text-2xl uppercase tracking-wide text-ink">{item.title}</h3>
+              <p class="mt-2 leading-relaxed text-muted">{item.text}</p>
             </div>
           </div>
         ))}
@@ -164,21 +169,18 @@ const team = [
   </section>
 
   <!-- Valores -->
-  <section class="border-y border-primary-100 bg-primary-50 py-24 md:py-32">
+  <section class="border-y-4 border-steel bg-concrete py-24 md:py-32">
     <div class="container mx-auto px-6 lg:px-12">
       <div class="mb-16 max-w-2xl text-center mx-auto">
-        <span class="mb-3 block text-sm font-bold tracking-wider text-primary-700 uppercase">O que nos move</span>
-        <h2 class="font-display text-3xl font-bold text-text md:text-4xl">Nossos valores</h2>
-        <p class="mt-4 text-lg text-muted">
-          Cada atendimento é uma chance de provar que desentupimento pode ser rápido, limpo e honesto.
-        </p>
+        <span class="mb-4 inline-block border-2 border-alert bg-alert px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">O que nos move</span>
+        <h2 class="font-display text-5xl uppercase leading-[0.9] tracking-wide text-ink md:text-6xl">Nossos valores</h2>
       </div>
 
-      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {values.map((item) => (
-          <div class="rounded-2xl bg-white p-10 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
-            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-primary-50 text-primary" aria-hidden="true" set:html={item.svg} />
-            <h3 class="mb-3 font-display text-lg font-bold text-text">{item.title}</h3>
+          <div class="border-2 border-ink bg-white p-8 shadow-[6px_6px_0px_0px_rgba(10,22,40,1)]">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center border-2 border-ink bg-signal text-ink" aria-hidden="true" set:html={item.svg} />
+            <h3 class="mb-3 font-display text-xl uppercase tracking-wide text-ink">{item.title}</h3>
             <p class="text-sm leading-relaxed text-muted">{item.text}</p>
           </div>
         ))}
@@ -190,20 +192,15 @@ const team = [
   <section class="py-24 md:py-32">
     <div class="container mx-auto px-6 lg:px-12">
       <div class="mb-16 max-w-2xl">
-        <span class="mb-3 block text-sm font-bold tracking-wider text-primary-700 uppercase">Nossa equipe</span>
-        <h2 class="font-display text-3xl font-bold text-text md:text-4xl">
-          Atendimento humano em cada etapa
-        </h2>
-        <p class="mt-4 text-lg text-muted">
-          Do primeiro contato ao pós-serviço, você fala com gente de verdade que entende sua urgência.
-        </p>
+        <span class="mb-4 inline-block border-2 border-alert bg-alert px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">Nossa equipe</span>
+        <h2 class="font-display text-5xl uppercase leading-[0.9] tracking-wide text-ink md:text-6xl">Atendimento humano</h2>
       </div>
 
-      <div class="grid gap-8 md:grid-cols-3">
+      <div class="grid gap-6 md:grid-cols-3">
         {team.map((item) => (
-          <div class="rounded-2xl border border-primary-100 bg-white p-10 shadow-sm">
-            <div class="mb-4 font-display text-4xl font-bold text-primary">{item.role.charAt(0)}</div>
-            <h3 class="mb-3 font-display text-xl font-bold text-text">{item.role}</h3>
+          <div class="border-2 border-ink bg-white p-8 shadow-[6px_6px_0px_0px_rgba(255,107,0,1)]">
+            <div class="mb-4 inline-flex h-14 w-14 items-center justify-center border-2 border-ink bg-signal font-display text-2xl text-ink">{item.role.charAt(0)}</div>
+            <h3 class="mb-3 font-display text-xl uppercase tracking-wide text-ink">{item.role}</h3>
             <p class="leading-relaxed text-muted">{item.text}</p>
           </div>
         ))}
@@ -214,15 +211,15 @@ const team = [
   <!-- CTA final -->
   <section class="pb-24 md:pb-32">
     <div class="container mx-auto px-6 lg:px-12">
-      <div class="rounded-3xl bg-dark p-12 text-center text-white md:p-20">
-        <h2 class="font-display text-3xl font-bold md:text-5xl">
-          Entupimento agora? Chame quem entende.
+      <div class="relative border-4 border-white bg-ink p-12 text-center text-white shadow-[12px_12px_0px_0px_rgba(255,107,0,1)] md:p-20">
+        <h2 class="font-display text-5xl uppercase leading-[0.9] tracking-wide md:text-7xl">
+          Chame quem entende
         </h2>
-        <p class="mx-auto mt-6 max-w-2xl text-lg text-slate-300">
+        <p class="mx-auto mt-6 max-w-2xl text-lg text-white/80">
           Atendimento 24h em toda a cidade do Rio de Janeiro. Orçamento grátis, chegada rápida e garantia no serviço.
         </p>
         <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button href={whatsappLink()} variant="accent" size="lg" target="_blank" rel="noopener noreferrer">
+          <Button href={whatsappLink()} variant="secondary" size="lg" target="_blank" rel="noopener noreferrer">
             Chamar no WhatsApp
           </Button>
           <Button href="/contato/" variant="outline" size="lg">

@@ -13,22 +13,22 @@ const differentials = [
   {
     title: 'Atendimento 24h',
     description: 'Emergência em entupimentos não espera. Atendemos todos os dias, inclusive feriados.',
-    svg: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
+    svg: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
   },
   {
     title: 'Toda a cidade do RJ',
     description: 'Desentupidora que chega rápido em qualquer zona do Rio de Janeiro.',
-    svg: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>',
+    svg: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>',
   },
   {
     title: 'Orçamento grátis',
     description: 'Avaliação honesta e sem compromisso antes de qualquer serviço.',
-    svg: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>',
+    svg: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>',
   },
   {
     title: 'Garantia no serviço',
     description: 'Você só paga quando o entupimento estiver realmente resolvido.',
-    svg: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>',
+    svg: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>',
   },
 ];
 
@@ -43,20 +43,20 @@ const testimonials = [
   <Hero />
 
   <!-- Diferenciais -->
-  <section class="border-b border-primary-100 bg-light py-24 md:py-32">
+  <section class="border-b-4 border-steel bg-concrete py-24 md:py-32">
     <div class="container mx-auto px-6 lg:px-12">
       <div class="mb-16 max-w-2xl text-center mx-auto">
-        <span class="mb-3 block text-sm font-bold tracking-wider text-primary-700 uppercase">Por que nos escolher</span>
-        <h2 class="font-display text-3xl font-bold text-text md:text-4xl">
-          Rapidez e garantia em cada atendimento
+        <span class="mb-4 inline-block border-2 border-alert bg-alert px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">Por que nos escolher</span>
+        <h2 class="font-display text-5xl uppercase leading-[0.9] tracking-wide text-ink md:text-6xl">
+          Rapidez e garantia
         </h2>
       </div>
 
-      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {differentials.map((item) => (
-          <div class="rounded-2xl bg-white p-10 shadow-sm text-center">
-            <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary-50 text-primary" aria-hidden="true" set:html={item.svg} />
-            <h3 class="mb-3 font-display text-lg font-bold text-text">{item.title}</h3>
+          <div class="border-2 border-ink bg-white p-8 shadow-[6px_6px_0px_0px_rgba(10,22,40,1)]">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center border-2 border-ink bg-signal text-ink" aria-hidden="true" set:html={item.svg} />
+            <h3 class="mb-3 font-display text-xl uppercase tracking-wide text-ink">{item.title}</h3>
             <p class="text-sm leading-relaxed text-muted">{item.description}</p>
           </div>
         ))}
@@ -69,9 +69,9 @@ const testimonials = [
     <div class="container mx-auto px-6 lg:px-12">
       <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
         <div class="space-y-6">
-          <span class="text-sm font-bold tracking-wider text-primary-700 uppercase">Sobre nós</span>
-          <h2 class="font-display text-3xl font-bold text-text md:text-4xl">
-            A desentupidora que o Rio de Janeiro confia
+          <span class="inline-block border-2 border-alert bg-alert px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">Sobre nós</span>
+          <h2 class="font-display text-5xl uppercase leading-[0.9] tracking-wide text-ink md:text-6xl">
+            A desentupidora que o Rio confia
           </h2>
           <p class="text-lg leading-relaxed text-muted">
             A Desentupidora Rio de Janeiro une equipe treinada, equipamento moderno e
@@ -83,61 +83,61 @@ const testimonials = [
             além de limpeza de fossa e caixa de gordura. Tudo com orçamento grátis,
             chegada rápida e garantia real no serviço.
           </p>
-          <Button href="/sobre/" variant="primary" size="lg">
+          <Button href="/quem-somos/" variant="outline-dark" size="lg">
             Conheça nossa história
           </Button>
         </div>
 
-        <div class="rounded-3xl bg-primary-50 p-12">
+        <div class="border-4 border-ink bg-signal p-10 shadow-[12px_12px_0px_0px_rgba(255,107,0,1)] md:p-12">
           <div class="grid grid-cols-2 gap-8 text-center">
             <div>
-              <div class="font-display text-5xl font-extrabold text-primary">24h</div>
-              <div class="mt-2 text-sm font-semibold text-muted uppercase tracking-wider">Atendimento</div>
+              <div class="font-display text-6xl uppercase leading-none text-ink">24h</div>
+              <div class="mt-2 text-sm font-bold uppercase tracking-wider text-ink/70">Atendimento</div>
             </div>
             <div>
-              <div class="font-display text-5xl font-extrabold text-primary">RJ</div>
-              <div class="mt-2 text-sm font-semibold text-muted uppercase tracking-wider">Toda cidade</div>
+              <div class="font-display text-6xl uppercase leading-none text-ink">RJ</div>
+              <div class="mt-2 text-sm font-bold uppercase tracking-wider text-ink/70">Toda cidade</div>
             </div>
             <div>
-              <div class="font-display text-5xl font-extrabold text-accent">0</div>
-              <div class="mt-2 text-sm font-semibold text-muted uppercase tracking-wider">Custo de visita*</div>
+              <div class="font-display text-6xl uppercase leading-none text-alert">0</div>
+              <div class="mt-2 text-sm font-bold uppercase tracking-wider text-ink/70">Custo de visita*</div>
             </div>
             <div>
-              <div class="font-display text-5xl font-extrabold text-primary">100%</div>
-              <div class="mt-2 text-sm font-semibold text-muted uppercase tracking-wider">Garantia</div>
+              <div class="font-display text-6xl uppercase leading-none text-ink">100%</div>
+              <div class="mt-2 text-sm font-bold uppercase tracking-wider text-ink/70">Garantia</div>
             </div>
           </div>
-          <p class="mt-8 text-center text-xs text-muted">*Orçamento e visita de avaliação sem custo. O valor é cobrado apenas se o serviço for executado.</p>
+          <p class="mt-8 text-center text-xs font-bold uppercase tracking-wide text-ink/60">*Orçamento e visita de avaliação sem custo. Valor cobrado apenas se executado.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Serviços -->
-  <section id="servicos" class="border-y border-primary-100 bg-primary-50 py-24 md:py-32">
+  <section id="servicos" class="border-y-4 border-steel bg-concrete py-24 md:py-32">
     <div class="container mx-auto px-6 lg:px-12">
       <div class="mb-16 flex flex-col justify-between gap-6 md:flex-row md:items-end">
         <div class="max-w-2xl">
-          <span class="mb-3 block text-sm font-bold tracking-wider text-primary-700 uppercase">Nossos Serviços</span>
-          <h2 class="font-display text-3xl font-bold text-text md:text-4xl">
-            Desentupimento completo no Rio de Janeiro
+          <span class="mb-4 inline-block border-2 border-alert bg-alert px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">Nossos Serviços</span>
+          <h2 class="font-display text-5xl uppercase leading-[0.9] tracking-wide text-ink md:text-6xl">
+            Desentupimento completo
           </h2>
           <p class="mt-4 text-lg text-muted">
             Do ralo entupido à fossa cheia, temos a solução certa para cada tipo de entupimento.
           </p>
         </div>
-        <Button href="/servicos/" variant="primary" size="md">
+        <Button href="/servicos/" variant="outline-dark" size="md">
           Ver todos os serviços
         </Button>
       </div>
 
-      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((service) => (
           <a href={`/servicos/${service.id.replace(/\.md$/, '').replace(/\//g, '-')}/`} class="block group">
             <ServiceCard
               title={service.data.title.replace(' no Rio de Janeiro', '')}
               description={service.data.description}
-              icon={service.data.icon || '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>'}
+              icon={service.data.icon || '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>'}
             />
           </a>
         ))}
@@ -149,51 +149,51 @@ const testimonials = [
   <section class="py-24 md:py-32">
     <div class="container mx-auto px-6 lg:px-12">
       <div class="mb-16 max-w-2xl text-center mx-auto">
-        <span class="mb-3 block text-sm font-bold tracking-wider text-primary-700 uppercase">Depoimentos</span>
-        <h2 class="font-display text-3xl font-bold text-text md:text-4xl">
+        <span class="mb-4 inline-block border-2 border-alert bg-alert px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">Depoimentos</span>
+        <h2 class="font-display text-5xl uppercase leading-[0.9] tracking-wide text-ink md:text-6xl">
           O que dizem nossos clientes
         </h2>
       </div>
 
-      <div class="grid gap-10 md:grid-cols-3">
+      <div class="grid gap-6 md:grid-cols-3">
         {testimonials.map((item) => (
-          <article class="rounded-2xl border border-primary-100 bg-white p-10 shadow-sm transition-all hover:-translate-y-1 hover:border-secondary/30 hover:shadow-lg">
-            <div class="mb-6 flex gap-1 text-accent" aria-hidden="true">
+          <article class="border-2 border-ink bg-white p-8 shadow-[6px_6px_0px_0px_rgba(255,107,0,1)]">
+            <div class="mb-5 flex gap-1 text-signal" aria-hidden="true">
               {'★★★★★'.split('').map((star) => (
-                <span>{star}</span>
+                <span class="text-alert">{star}</span>
               ))}
             </div>
             <blockquote class="mb-6 leading-relaxed text-muted">
               "{item.text}"
             </blockquote>
-            <footer>
-              <div class="font-display font-bold text-text">{item.name}</div>
-              <div class="text-sm text-muted">{item.location}</div>
+            <footer class="border-t-2 border-steel pt-5">
+              <div class="font-display text-lg uppercase tracking-wide text-ink">{item.name}</div>
+              <div class="text-sm font-bold uppercase tracking-wider text-muted">{item.location}</div>
             </footer>
           </article>
         ))}
       </div>
-      <p class="mt-10 text-center text-sm text-muted">*Depoimentos ilustrativos baseados em atendimentos reais da Desentupidora Rio de Janeiro.</p>
+      <p class="mt-10 text-center text-sm font-bold uppercase tracking-wide text-muted">*Depoimentos ilustrativos baseados em atendimentos reais.</p>
     </div>
   </section>
 
   <!-- Chamada de Contato -->
   <section id="contato" class="py-24 md:py-32">
     <div class="container mx-auto px-6 lg:px-12">
-      <div class="rounded-3xl bg-dark p-12 text-center text-white md:p-20">
-        <h2 class="font-display text-3xl font-bold md:text-5xl">
-          Entupimento agora? Chame a gente.
+      <div class="relative border-4 border-white bg-ink p-12 text-center text-white shadow-[12px_12px_0px_0px_rgba(255,107,0,1)] md:p-20">
+        <h2 class="font-display text-5xl uppercase leading-[0.9] tracking-wide md:text-7xl">
+          Entupimento agora?
         </h2>
-        <p class="mx-auto mt-6 max-w-2xl text-lg text-slate-300">
+        <p class="mx-auto mt-6 max-w-2xl text-lg text-white/80">
           Atendimento 24h em toda a cidade do Rio de Janeiro. Orçamento grátis,
           chegada rápida e garantia no serviço.
         </p>
         <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button href={whatsappLink()} variant="accent" size="lg" target="_blank" rel="noopener noreferrer">
+          <Button href={whatsappLink()} variant="secondary" size="lg" target="_blank" rel="noopener noreferrer">
             Chamar no WhatsApp
           </Button>
           <Button href={phoneLink()} variant="outline" size="lg">
-            Ligar agora: {SITE_CONFIG.phone.replace('+55', '').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3')}
+            Ligar: {SITE_CONFIG.phone.replace('+55', '').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3')}
           </Button>
         </div>
       </div>
