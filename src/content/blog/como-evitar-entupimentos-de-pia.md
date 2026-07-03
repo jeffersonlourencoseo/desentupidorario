@@ -19,4 +19,4 @@ Um ralo com tela evita que cabelos, restos de comida e pequenos objetos caiam no
 
 Água quente pode parecer ajudar, mas em canos antigos ela pode derreter gordura que depois resseca mais adiante, piorando o entupimento.
 
-Se a pia já estiver lenta, não espere transbordar. Entre em contato com a Desentupidora Rio de Janeiro para um atendimento rápido e garantido.
+Se a pia já estiver lenta, não espere transbordar. Entre em contato com a Desentupidora Rio de Janeiro para um [atendimento rápido e garantido](/servicos/desentupimento-de-pia/). Se o problema for na tubulação principal, também fazemos [desentupimento de cano](/servicos/desentupimento-de-cano/).

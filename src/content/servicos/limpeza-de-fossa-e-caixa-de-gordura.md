@@ -14,4 +14,4 @@ A limpeza periódica de fossa e caixa de gordura evita entupimentos, mau cheiro 
 - Restaurantes e cozinhas com acúmulo frequente de gordura
 - Preventiva anual ou semestral em condomínios
 
-Atendemos residências, comércios e indústrias em toda a cidade do Rio de Janeiro.
+Atendemos residências, comércios e indústrias em toda a cidade do Rio de Janeiro. Se além da fossa houver entupimento nos ralos ou vasos, também fazemos [desentupimento de ralo](/servicos/desentupimento-de-ralo/) e [desentupimento de vaso sanitário](/servicos/desentupimento-de-vaso-sanitario/). Restaurantes e lanchonetes podem combinar com [desentupimento de pia](/servicos/desentupimento-de-pia/) para manter a cozinha livre de gordura.

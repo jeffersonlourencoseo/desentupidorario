@@ -14,4 +14,4 @@ A Desentupidora Rio de Janeiro resolve entupimentos na rede de esgoto de casas, 
 - Vaso sanitário com descarga fraca ou lentidão na rede
 - Pia ou lavatório com saída de água lenta
 
-Nosso atendimento funciona 24 horas em todas as regiões do Rio de Janeiro, com orçamento grátis e chegada rápida.
+Nosso atendimento funciona 24 horas em todas as regiões do Rio de Janeiro, com orçamento grátis e chegada rápida. Se o entupimento estiver na tubulação interna, também fazemos [desentupimento de cano](/servicos/desentupimento-de-cano/). Para quem tem fossa ou caixa de gordura cheia, oferecemos [limpeza de fossa e caixa de gordura](/servicos/limpeza-de-fossa-e-caixa-de-gordura/).

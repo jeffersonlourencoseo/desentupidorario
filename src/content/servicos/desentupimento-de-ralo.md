@@ -14,4 +14,4 @@ Ralo entupido faz água parar no banheiro, área de serviço, quintal ou garagem
 - Ralo externo e caixa de passagem
 - Ralo de garagem e áreas de convivência
 
-Nosso serviço é rápido, limpo e com garantia. Entre em contato pelo WhatsApp para um orçamento sem compromisso.
+Nosso serviço é rápido, limpo e com garantia. Entre em contato pelo WhatsApp para um orçamento sem compromisso. O entupimento de ralo muitas vezes indica problema no [cano de esgoto](/servicos/desentupimento-de-cano/) ou na [rede de esgoto principal](/servicos/desentupimento-de-esgoto/). Quando a água volta pelo ralo do banheiro, também avaliamos o [vaso sanitário](/servicos/desentupimento-de-vaso-sanitario/).

@@ -14,4 +14,4 @@ Vaso sanitário entupido é uma emergência: pode transbordar, espalhar mau chei
 - Acúmulo de resíduos na caixa acoplada
 - Rede de esgoto com obstrução parcial
 
-Se o vaso estiver próximo de transbordar, não use a descarga. Chame nosso atendimento emergencial pelo WhatsApp ou telefone.
+Se o vaso estiver próximo de transbordar, não use a descarga. Chame nosso atendimento emergencial pelo WhatsApp ou telefone. O entupimento pode estar ligado à rede de [esgoto](/servicos/desentupimento-de-esgoto/) ou ao [cano de ligação do banheiro](/servicos/desentupimento-de-cano/). Para empresas e condomínios, indicamos a [limpeza de fossa e caixa de gordura](/servicos/limpeza-de-fossa-e-caixa-de-gordura/).

@@ -15,37 +15,50 @@ const breadcrumbs = [
 const faqs = [
   {
     question: 'Quanto custa chamar uma desentupidora no Rio de Janeiro?',
-    answer: 'A Desentupidora Rio de Janeiro faz orçamento grátis e sem compromisso. O valor depende do tipo de entupimento, local da visita e complexidade do serviço. Você só paga se executar.',
+    answerHtml: 'A Desentupidora Rio de Janeiro faz orçamento grátis e sem compromisso. O valor depende do tipo de entupimento, local da visita e complexidade do serviço. Você só paga se executar. Veja todos os <a href="/servicos/" class="font-semibold text-alert hover:text-alert-600 hover:underline">serviços de desentupimento</a> que oferecemos.',
+    answerText: 'A Desentupidora Rio de Janeiro faz orçamento grátis e sem compromisso. O valor depende do tipo de entupimento, local da visita e complexidade do serviço. Você só paga se executar. Veja todos os serviços de desentupimento que oferecemos em https://desentupidorario.vercel.app/servicos/.',
   },
   {
     question: 'A desentupidora atende em qualquer horário?',
-    answer: 'Sim. O atendimento é 24 horas por dia, todos os dias da semana, inclusive feriados. Entupimento não avisa, por isso mantemos equipes de prontidão.',
+    answerHtml: 'Sim. O atendimento é 24 horas por dia, todos os dias da semana, inclusive feriados. Entupimento não avisa, por isso mantemos equipes de prontidão.',
+    answerText: 'Sim. O atendimento é 24 horas por dia, todos os dias da semana, inclusive feriados. Entupimento não avisa, por isso mantemos equipes de prontidão.',
   },
   {
     question: 'A empresa atende em toda a cidade do Rio?',
-    answer: 'Sim. Atendemos residências, comércios, condomínios e indústrias em todas as regiões do Rio de Janeiro, com equipes espalhadas por todas as zonas da cidade.',
+    answerHtml: 'Sim. Atendemos residências, comércios, condomínios e indústrias em todas as regiões do Rio de Janeiro, com equipes espalhadas por todas as zonas da cidade.',
+    answerText: 'Sim. Atendemos residências, comércios, condomínios e indústrias em todas as regiões do Rio de Janeiro, com equipes espalhadas por todas as zonas da cidade.',
   },
   {
     question: 'Qual o telefone e WhatsApp da Desentupidora Rio de Janeiro?',
-    answer: `O telefone e WhatsApp é ${SITE_CONFIG.phone.replace('+55', '').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3')}. Você pode chamar direto pelo WhatsApp ou ligar a qualquer hora.`,
+    answerHtml: `O telefone e WhatsApp é ${SITE_CONFIG.phone.replace('+55', '').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3')}. Você pode chamar direto pelo WhatsApp ou ligar a qualquer hora.`,
+    answerText: `O telefone e WhatsApp é ${SITE_CONFIG.phone.replace('+55', '').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3')}. Você pode chamar direto pelo WhatsApp ou ligar a qualquer hora.`,
   },
   {
     question: 'Quais os principais sinais de que preciso chamar uma desentupidora?',
-    answer: 'Esgoto voltando pela caixa de inspeção ou ralo, mau cheiro persistente em banheiros, descarga fraca, água descendo lentamente em pias ou ralos, e vaso sanitário próximo de transbordar.',
+    answerHtml: 'Esgoto voltando pela caixa de inspeção ou ralo, mau cheiro persistente em banheiros, descarga fraca, água descendo lentamente em pias ou ralos, e vaso sanitário próximo de transbordar. Cada sintoma pode indicar um serviço diferente: <a href="/servicos/desentupimento-de-esgoto/" class="font-semibold text-alert hover:text-alert-600 hover:underline">desentupimento de esgoto</a>, <a href="/servicos/desentupimento-de-pia/" class="font-semibold text-alert hover:text-alert-600 hover:underline">desentupimento de pia</a>, <a href="/servicos/desentupimento-de-ralo/" class="font-semibold text-alert hover:text-alert-600 hover:underline">desentupimento de ralo</a> ou <a href="/servicos/desentupimento-de-vaso-sanitario/" class="font-semibold text-alert hover:text-alert-600 hover:underline">desentupimento de vaso sanitário</a>.',
+    answerText: 'Esgoto voltando pela caixa de inspeção ou ralo, mau cheiro persistente em banheiros, descarga fraca, água descendo lentamente em pias ou ralos, e vaso sanitário próximo de transbordar. Cada sintoma pode indicar um serviço diferente: desentupimento de esgoto, desentupimento de pia, desentupimento de ralo ou desentupimento de vaso sanitário.',
   },
   {
     question: 'A limpeza de fossa pode ser feita em restaurantes e condomínios?',
-    answer: 'Sim. Fazemos limpeza, sucção e manutenção de fossa e caixa de gordura para residências, restaurantes, comércios e condomínios no Rio de Janeiro.',
+    answerHtml: 'Sim. Fazemos <a href="/servicos/limpeza-de-fossa-e-caixa-de-gordura/" class="font-semibold text-alert hover:text-alert-600 hover:underline">limpeza de fossa e caixa de gordura</a> para residências, restaurantes, comércios e condomínios no Rio de Janeiro.',
+    answerText: 'Sim. Fazemos limpeza de fossa e caixa de gordura para residências, restaurantes, comércios e condomínios no Rio de Janeiro.',
   },
   {
     question: 'O serviço tem garantia?',
-    answer: 'Sim. Oferecemos garantia no serviço. Se o problema persistir, voltamos para reajustar sem custo extra. Nossa palavra é compromisso de verdade.',
+    answerHtml: 'Sim. Oferecemos garantia no serviço. Se o problema persistir, voltamos para reajustar sem custo extra. Nossa palavra é compromisso de verdade.',
+    answerText: 'Sim. Oferecemos garantia no serviço. Se o problema persistir, voltamos para reajustar sem custo extra. Nossa palavra é compromisso de verdade.',
   },
   {
     question: 'Qual o endereço da Desentupidora Rio de Janeiro?',
-    answer: `A sede fica em ${SITE_CONFIG.fullAddress}. Atuamos em toda a cidade do Rio de Janeiro com deslocamento de equipes para o local do cliente.`,
+    answerHtml: `A sede fica em ${SITE_CONFIG.fullAddress}. Atuamos em toda a cidade do Rio de Janeiro com deslocamento de equipes para o local do cliente.`,
+    answerText: `A sede fica em ${SITE_CONFIG.fullAddress}. Atuamos em toda a cidade do Rio de Janeiro com deslocamento de equipes para o local do cliente.`,
   },
 ];
+
+const schemaFaqs = faqs.map((faq) => ({
+  question: faq.question,
+  answer: faq.answerText,
+}));
 ---
 
 <Layout
@@ -55,7 +68,7 @@ const faqs = [
   <SchemaBreadcrumbs items={breadcrumbs} />
   <Breadcrumbs items={breadcrumbs} />
 
-  <SchemaFAQPage faqs={faqs} />
+  <SchemaFAQPage faqs={schemaFaqs} />
 
   <section class="py-24 md:py-32">
     <div class="container mx-auto px-6 lg:px-12">
@@ -72,7 +85,7 @@ const faqs = [
               {faq.question}
             </h2>
             <p class="mt-4 leading-relaxed text-muted">
-              {faq.answer}
+              <Fragment set:html={faq.answerHtml} />
             </p>
           </article>
         ))}

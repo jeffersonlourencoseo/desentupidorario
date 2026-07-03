@@ -27,4 +27,4 @@ Manchas de umidade ou grama mais verde em uma área específica do quintal podem
 
 A limpeza preventiva deve ser feita a cada 1 a 2 anos, dependendo do tamanho da fossa e do número de usuários.
 
-Se você notar algum desses sinais, chame a Desentupidora Rio de Janeiro. Fazemos limpeza, sucção e descarte correto do resíduo.
+Se você notar algum desses sinais, chame a Desentupidora Rio de Janeiro. Fazemos [limpeza de fossa e caixa de gordura](/servicos/limpeza-de-fossa-e-caixa-de-gordura/) com sucção e descarte correto do resíduo. Junto com a fossa, também é comum precisar de [desentupimento de esgoto](/servicos/desentupimento-de-esgoto/).

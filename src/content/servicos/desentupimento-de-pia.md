@@ -14,4 +14,4 @@ Pia entupida atrapalha o dia a dia e pode acabar transbordando. A Desentupidora 
 - Cabelos e acúmulo de sabão
 - Instalação antiga com diâmetro reduzido
 
-Chame a gente no WhatsApp. Atendemos em qualquer bairro do Rio de Janeiro, com agilidade e limpeza garantida.
+Chame a gente no WhatsApp. Atendemos em qualquer bairro do Rio de Janeiro, com agilidade e limpeza garantida. Se o entupimento estiver mais abaixo na tubulação, pode ser necessário [desentupimento de cano](/servicos/desentupimento-de-cano/). Para ralos conectados à mesma rede, também fazemos [desentupimento de ralo](/servicos/desentupimento-de-ralo/).

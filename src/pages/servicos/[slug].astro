@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Button from '../../components/Button.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import SchemaBreadcrumbs from '../../components/seo/SchemaBreadcrumbs.astro';
 import SchemaService from '../../components/seo/SchemaService.astro';
@@ -18,10 +19,17 @@ export async function getStaticPaths() {
 const { service } = Astro.props;
 const { Content } = await render(service);
 
+const allServices = await getCollection('servicos');
+
 const serviceName = service.data.title.replace(' no Rio de Janeiro', '');
 const shortName = serviceName.replace('Desentupimento de ', '').replace('Limpeza de ', '');
 const slug = Astro.params.slug;
 const serviceUrl = `${SITE_CONFIG.domain}/servicos/${slug}/`;
+
+const relatedServices = allServices
+  .filter((s) => s.id !== service.id)
+  .sort((a, b) => a.data.order - b.data.order)
+  .slice(0, 3);
 
 const breadcrumbs = [
   { name: 'Início', url: '/' },
@@ -126,6 +134,23 @@ const breadcrumbs = [
             </li>
           </ul>
         </div>
+
+        <!-- Serviços relacionados -->
+        {relatedServices.length > 0 && (
+          <div class="mt-16 border-2 border-steel bg-white p-10 shadow-[6px_6px_0px_0px_rgba(225,231,236,1)]">
+            <h2 class="mb-8 font-display text-2xl font-bold text-text">Serviços relacionados</h2>
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {relatedServices.map((related) => (
+                <a href={`/servicos/${related.id.replace(/\.md$/, '').replace(/\//g, '-')}/`} class="block group">
+                  <ServiceCard
+                    title={related.data.title.replace(' no Rio de Janeiro', '')}
+                    description={related.data.description}
+                    icon={related.data.icon || ''}
+                  />
+                </a>
+              ))}
+            </div>          </div>
+        )}
 
         <!-- CTA de fechamento -->
         <div class="mt-16 border-4 border-white bg-ink p-12 text-center text-white shadow-[12px_12px_0px_0px_rgba(217,92,30,1)] md:p-16">

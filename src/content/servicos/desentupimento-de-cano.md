@@ -14,4 +14,4 @@ Canos entupidos por gordura, cabelos, resíduos de alimentos ou objetos pequenos
 - Gorgolejar ou barulho de sucção nos canos
 - Vazamento em conexões por pressão acumulada
 
-Onde for possível, resolvemos sem quebrar paredes ou pisos. Quando a tubulação exigir abertura, executamos o serviço com o mínimo de impacto e limpamos o local ao final.
+Onde for possível, resolvemos sem quebrar paredes ou pisos. Quando a tubulação exigir abertura, executamos o serviço com o mínimo de impacto e limpamos o local ao final. O entupimento também pode afetar [pias](/servicos/desentupimento-de-pia/) e [ralos](/servicos/desentupimento-de-ralo/), que costumam compartilhar a mesma rede de esgoto. Para emergências no banheiro, temos [desentupimento de vaso sanitário](/servicos/desentupimento-de-vaso-sanitario/).
