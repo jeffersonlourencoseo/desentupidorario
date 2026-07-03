@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import Button from '../components/Button.astro';
+import { whatsappLink } from '../data/config.ts';
 
 const missionVisionValues = [
   { title: 'Missão', description: 'Resolver entupimentos no Rio de Janeiro com rapidez, limpeza e honestidade, devolvendo o conforto de quem confia em nosso trabalho.', icon: '🎯' },
@@ -48,8 +49,8 @@ const team = [
             de verdade e deixar o local limpo. Você só paga quando a água voltar a descer.
           </p>
           <div class="pt-4">
-            <Button href="whatsappLink()" variant="accent" size="lg" target="_blank" rel="noopener noreferrer">
-              Falar com um técnico
+            <Button href={whatsappLink()} variant="accent" size="lg" target="_blank" rel="noopener noreferrer">
+              Chamar no WhatsApp
             </Button>
           </div>
         </div>

@@ -3,12 +3,13 @@ import Layout from '../layouts/Layout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import ContactForm from '../components/forms/ContactForm.astro';
 import Button from '../components/Button.astro';
+import { SITE_CONFIG, whatsappLink, phoneLink, emailLink } from '../data/config.ts';
 
 const channels = [
-  { label: 'WhatsApp', value: '(21) 99775-1577', href: 'whatsappLink()' },
-  { label: 'Telefone', value: '(21) 99775-1577', href: 'phoneLink()' },
-  { label: 'E-mail', value: 'contato@desentupidorario.com.br', href: 'emailLink()' },
-  { label: 'Endereço', value: 'Av. Brasil, 10946 — Penha, Rio de Janeiro/RJ', href: '#' },
+  { label: 'WhatsApp', value: SITE_CONFIG.phone.replace('+55', ''), href: whatsappLink() },
+  { label: 'Telefone', value: SITE_CONFIG.phone.replace('+55', ''), href: phoneLink() },
+  { label: 'E-mail', value: SITE_CONFIG.email, href: emailLink() },
+  { label: 'Endereço', value: SITE_CONFIG.fullAddress, href: '#' },
 ];
 ---
 
@@ -45,8 +46,8 @@ const channels = [
               Se o esgoto está voltando ou o vaso sanitário pode transbordar, chame nosso
               atendimento emergencial direto pelo WhatsApp.
             </p>
-            <Button href="whatsappLink()" variant="accent" size="lg" target="_blank" rel="noopener noreferrer">
-              Chamar emergência 24h
+            <Button href={whatsappLink()} variant="accent" size="lg" target="_blank" rel="noopener noreferrer">
+              Chamar no WhatsApp
             </Button>
           </div>
         </div>

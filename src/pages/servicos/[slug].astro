@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Button from '../../components/Button.astro';
+import { SITE_CONFIG, whatsappLink, phoneLink } from '../../data/config.ts';
 
 export async function getStaticPaths() {
   const services = await getCollection('servicos');
@@ -117,11 +118,11 @@ const shortName = serviceName.replace('Desentupimento de ', '').replace('Limpeza
             chegada rápida e garantia real no serviço.
           </p>
           <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button href="whatsappLink()" variant="accent" size="lg" target="_blank" rel="noopener noreferrer">
+            <Button href={whatsappLink()} variant="accent" size="lg" target="_blank" rel="noopener noreferrer">
               Chamar no WhatsApp
             </Button>
-            <Button href="phoneLink()" variant="outline" size="lg">
-              Ligar: (21) 99775-1577
+            <Button href={phoneLink()} variant="outline" size="lg">
+              Ligar: {SITE_CONFIG.phone.replace('+55', '').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3')}
             </Button>
           </div>
         </div>

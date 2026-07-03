@@ -4,15 +4,32 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import Button from '../components/Button.astro';
+import { SITE_CONFIG, whatsappLink, phoneLink } from '../data/config.ts';
 
 const allServices = await getCollection('servicos');
 const services = allServices.sort((a, b) => a.data.order - b.data.order).slice(0, 6);
 
 const differentials = [
-  { title: 'Atendimento 24h', description: 'Emergência em entupimentos não espera. Atendemos todos os dias, inclusive feriados.', icon: '⏰' },
-  { title: 'Toda a cidade do RJ', description: 'Desentupidora que chega rápido em qualquer zona do Rio de Janeiro.', icon: '📍' },
-  { title: 'Orçamento grátis', description: 'Avaliação honesta e sem compromisso antes de qualquer serviço.', icon: '📝' },
-  { title: 'Garantia no serviço', description: 'Você só paga quando o entupimento estiver realmente resolvido.', icon: '🛡️' },
+  {
+    title: 'Atendimento 24h',
+    description: 'Emergência em entupimentos não espera. Atendemos todos os dias, inclusive feriados.',
+    svg: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
+  },
+  {
+    title: 'Toda a cidade do RJ',
+    description: 'Desentupidora que chega rápido em qualquer zona do Rio de Janeiro.',
+    svg: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>',
+  },
+  {
+    title: 'Orçamento grátis',
+    description: 'Avaliação honesta e sem compromisso antes de qualquer serviço.',
+    svg: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>',
+  },
+  {
+    title: 'Garantia no serviço',
+    description: 'Você só paga quando o entupimento estiver realmente resolvido.',
+    svg: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>',
+  },
 ];
 
 const testimonials = [
@@ -38,7 +55,7 @@ const testimonials = [
       <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {differentials.map((item) => (
           <div class="rounded-2xl bg-white p-10 shadow-sm text-center">
-            <div class="mb-4 text-4xl" aria-hidden="true">{item.icon}</div>
+            <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary-50 text-primary" aria-hidden="true" set:html={item.svg} />
             <h3 class="mb-3 font-display text-lg font-bold text-text">{item.title}</h3>
             <p class="text-sm leading-relaxed text-muted">{item.description}</p>
           </div>
@@ -90,7 +107,7 @@ const testimonials = [
               <div class="mt-2 text-sm font-semibold text-muted uppercase tracking-wider">Garantia</div>
             </div>
           </div>
-          <p class="mt-8 text-center text-xs text-muted">*Orçamento grátis. Valor cobrado apenas se o serviço for executado.</p>
+          <p class="mt-8 text-center text-xs text-muted">*Orçamento e visita de avaliação sem custo. O valor é cobrado apenas se o serviço for executado.</p>
         </div>
       </div>
     </div>
@@ -134,7 +151,7 @@ const testimonials = [
       <div class="mb-16 max-w-2xl text-center mx-auto">
         <span class="mb-3 block text-sm font-bold tracking-wider text-primary-700 uppercase">Depoimentos</span>
         <h2 class="font-display text-3xl font-bold text-text md:text-4xl">
-          O que dizem nossos clientes no Rio de Janeiro
+          O que dizem nossos clientes
         </h2>
       </div>
 
@@ -156,6 +173,7 @@ const testimonials = [
           </article>
         ))}
       </div>
+      <p class="mt-10 text-center text-sm text-muted">*Depoimentos ilustrativos baseados em atendimentos reais da Desentupidora Rio de Janeiro.</p>
     </div>
   </section>
 
@@ -171,11 +189,11 @@ const testimonials = [
           chegada rápida e garantia no serviço.
         </p>
         <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button href="whatsappLink()" variant="accent" size="lg" target="_blank" rel="noopener noreferrer">
-            Conversar no WhatsApp
+          <Button href={whatsappLink()} variant="accent" size="lg" target="_blank" rel="noopener noreferrer">
+            Chamar no WhatsApp
           </Button>
-          <Button href="phoneLink()" variant="outline" size="lg">
-            Ligar agora: (21) 99775-1577
+          <Button href={phoneLink()} variant="outline" size="lg">
+            Ligar agora: {SITE_CONFIG.phone.replace('+55', '').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3')}
           </Button>
         </div>
       </div>

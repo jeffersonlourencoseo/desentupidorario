@@ -48,7 +48,7 @@ const links = [
       <div class="space-y-5">
         <h3 class="font-display text-lg font-semibold">Contato</h3>
         <ul class="space-y-3 text-sm text-white/80">
-          <li>WhatsApp: <a href={whatsappLink()} class="font-semibold text-white hover:text-secondary hover:underline transition-colors">SITE_CONFIG.phone.replace("+55", "")</a></li>
+          <li>WhatsApp: <a href={whatsappLink()} class="font-semibold text-white hover:text-secondary hover:underline transition-colors">{SITE_CONFIG.phone.replace('+55', '')}</a></li>
           <li>E-mail: <a href={emailLink()} class="font-semibold text-white hover:text-secondary hover:underline transition-colors">{SITE_CONFIG.email}</a></li>
           <li>{SITE_CONFIG.fullAddress}</li>
         </ul>

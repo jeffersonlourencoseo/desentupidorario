@@ -1,5 +1,6 @@
 ---
 import Button from './Button.astro';
+import { whatsappLink } from '../data/config.ts';
 ---
 
 <section class="relative overflow-hidden bg-primary py-24 text-white md:py-32">
@@ -32,8 +33,8 @@ import Button from './Button.astro';
       </p>
 
       <div class="mt-10 flex flex-col gap-4 sm:flex-row">
-        <Button href="whatsappLink()" variant="accent" size="lg" target="_blank" rel="noopener noreferrer">
-          Solicitar orçamento no WhatsApp
+        <Button href={whatsappLink()} variant="accent" size="lg" target="_blank" rel="noopener noreferrer">
+          Chamar no WhatsApp
         </Button>
         <Button href="/servicos/" variant="outline" size="lg">
           Ver nossos serviços
