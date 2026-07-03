@@ -5,13 +5,13 @@ import ContactForm from '../components/forms/ContactForm.astro';
 import Button from '../components/Button.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import SchemaBreadcrumbs from '../components/seo/SchemaBreadcrumbs.astro';
-import { SITE_CONFIG, whatsappLink, phoneLink, emailLink } from '../data/config.ts';
+import { SITE_CONFIG, whatsappLink, phoneLink, emailLink, mapsLink } from '../data/config.ts';
 
 const channels = [
-  { label: 'WhatsApp', value: SITE_CONFIG.phone.replace('+55', '').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3'), href: whatsappLink() },
+  { label: 'WhatsApp', value: SITE_CONFIG.phone.replace('+55', '').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3'), href: whatsappLink(), target: '_blank', rel: 'noopener noreferrer' },
   { label: 'Telefone', value: SITE_CONFIG.phone.replace('+55', '').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3'), href: phoneLink() },
   { label: 'E-mail', value: SITE_CONFIG.email, href: emailLink() },
-  { label: 'Endereço', value: SITE_CONFIG.fullAddress, href: '#' },
+  { label: 'Endereço', value: SITE_CONFIG.fullAddress, href: mapsLink(), target: '_blank', rel: 'noopener noreferrer' },
 ];
 
 const breadcrumbs = [
@@ -43,7 +43,12 @@ const breadcrumbs = [
               {channels.map((channel) => (
                 <li class="flex flex-col gap-1">
                   <span class="text-xs font-bold uppercase tracking-wider text-muted">{channel.label}</span>
-                  <a href={channel.href} class="text-lg font-semibold text-ink hover:text-alert transition-colors">
+                  <a
+                    href={channel.href}
+                    target={channel.target}
+                    rel={channel.rel}
+                    class="text-lg font-semibold text-ink hover:text-alert transition-colors"
+                  >
                     {channel.value}
                   </a>
                 </li>

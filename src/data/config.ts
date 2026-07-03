@@ -30,7 +30,7 @@ export const SITE_CONFIG = {
   // cnpj: '[SUBSTITUIR: CNPJ da empresa - adicionar quando houver]',
 
   // Social / contato
-  whatsappMessage: 'Olá! Preciso de uma desentupidora no Rio de Janeiro. Pode me ajudar?',
+  whatsappMessage: 'Olá, vi o site no google e gostaria de mais informações!',
 };
 
 export function whatsappLink(message: string = SITE_CONFIG.whatsappMessage) {
@@ -44,4 +44,9 @@ export function phoneLink() {
 
 export function emailLink() {
   return `mailto:${SITE_CONFIG.email}`;
+}
+
+export function mapsLink() {
+  const query = encodeURIComponent(SITE_CONFIG.fullAddress);
+  return `https://www.google.com/maps/search/?api=1&query=${query}`;
 }

@@ -1,5 +1,5 @@
 ---
-import { SITE_CONFIG, whatsappLink, phoneLink, emailLink } from '../data/config.ts';
+import { SITE_CONFIG, whatsappLink, phoneLink, emailLink, mapsLink } from '../data/config.ts';
 
 const year = new Date().getFullYear();
 
@@ -82,7 +82,9 @@ const links = [
           </li>
           <li class="flex flex-col">
             <span class="text-xs font-bold uppercase tracking-wide text-white/40">Endereço</span>
-            <span class="font-medium text-white">{SITE_CONFIG.fullAddress}</span>
+            <a href={mapsLink()} target="_blank" rel="noopener noreferrer" class="font-medium text-white transition-colors hover:text-alert">
+              {SITE_CONFIG.fullAddress}
+            </a>
           </li>
         </ul>
       </div>
