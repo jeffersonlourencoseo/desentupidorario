@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import ContactForm from '../components/forms/ContactForm.astro';
+import Button from '../components/Button.astro';
+
+const channels = [
+  { label: 'WhatsApp', value: '(21) 99775-1577', href: 'whatsappLink()' },
+  { label: 'Telefone', value: '(21) 99775-1577', href: 'phoneLink()' },
+  { label: 'E-mail', value: 'contato@desentupidorario.com.br', href: 'emailLink()' },
+  { label: 'Endereço', value: 'Av. Brasil, 10946 — Penha, Rio de Janeiro/RJ', href: '#' },
+];
+---
+
+<Layout
+  title="Contato | Desentupidora Rio de Janeiro"
+  description="Entre em contato com a Desentupidora Rio de Janeiro. Atendimento 24h por WhatsApp, telefone ou formulário.">
+  <section class="py-24 md:py-32">
+    <div class="container mx-auto px-6 lg:px-12">
+      <PageHeader
+        eyebrow="Contato"
+        title="Fale com a Desentupidora RJ"
+        description="Escolha o canal mais fácil para você. Atendemos emergências 24 horas em toda a cidade do Rio de Janeiro."
+      />
+
+      <div class="grid gap-12 lg:grid-cols-2">
+        <div class="space-y-8">
+          <div class="rounded-2xl border border-primary-100 bg-white p-10">
+            <h2 class="mb-8 font-display text-2xl font-bold text-text">Canais de atendimento</h2>
+            <ul class="space-y-6">
+              {channels.map((channel) => (
+                <li class="flex flex-col gap-1">
+                  <span class="text-xs font-bold tracking-wider text-primary-700 uppercase">{channel.label}</span>
+                  <a href={channel.href} class="text-lg font-semibold text-text hover:text-primary">
+                    {channel.value}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="rounded-2xl bg-dark p-10 text-white">
+            <h2 class="mb-4 font-display text-2xl font-bold">Emergência agora?</h2>
+            <p class="mb-6 text-slate-300">
+              Se o esgoto está voltando ou o vaso sanitário pode transbordar, chame nosso
+              atendimento emergencial direto pelo WhatsApp.
+            </p>
+            <Button href="whatsappLink()" variant="accent" size="lg" target="_blank" rel="noopener noreferrer">
+              Chamar emergência 24h
+            </Button>
+          </div>
+        </div>
+
+        <div>
+          <ContactForm />
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

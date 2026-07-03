@@ -1,0 +1,182 @@
+---
+import { whatsappLink, SITE_CONFIG } from '../data/config.ts';
+
+const nav = [
+  { label: 'Serviços', href: '/servicos/' },
+  { label: 'Sobre', href: '/sobre/' },
+  { label: 'Blog', href: '/blog/' },
+  { label: 'Contato', href: '/contato/' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-50 border-b border-primary-100/50 bg-light/90 backdrop-blur-md">
+  <div class="container mx-auto px-6 lg:px-12">
+    <div class="flex h-20 items-center justify-between">
+      <a href="/" class="flex items-center gap-3 transition-transform hover:scale-[1.02]" aria-label={SITE_CONFIG.siteName}>
+        <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white shadow-md shadow-primary/20">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 6v6l4 2" />
+          </svg>
+        </span>
+        <div class="leading-tight">
+          <span class="block font-display text-lg font-bold text-primary">Desentupidora</span>
+          <span class="block text-xs font-semibold tracking-wider text-primary-700 uppercase">Rio de Janeiro</span>
+        </div>
+      </a>
+
+      <nav class="hidden items-center gap-10 md:flex" aria-label="Navegação principal">
+        {nav.map((item) => {
+          const isActive = currentPath === item.href || currentPath.startsWith(item.href.slice(0, -1));
+          return (
+            <a
+              href={item.href}
+              class:list={[
+                'text-sm font-semibold transition-all hover:text-primary hover:scale-105',
+                isActive ? 'text-primary' : 'text-text',
+              ]}
+            >
+              {item.label}
+            </a>
+          );
+        })}
+      </nav>
+
+      <a
+        href={whatsappLink()}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hidden md:inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-bold text-white shadow-lg shadow-accent/20 transition-all hover:bg-accent-600 hover:scale-105 active:scale-95"
+      >
+        Chamar Agora
+      </a>
+
+      <button
+        id="menu-toggle"
+        type="button"
+        class="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-primary transition-all hover:bg-primary-50 hover:scale-105 active:scale-95"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+        <svg id="menu-icon-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Menu mobile drawer -->
+<div
+  id="mobile-menu"
+  class="fixed inset-0 z-[999] translate-x-full bg-accent transition-transform duration-300 md:hidden"
+  aria-hidden="true"
+>
+  <div class="flex h-full flex-col px-6 py-8">
+    <div class="flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3" aria-label="Desentupidora Rio de Janeiro">
+        <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-white text-accent">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 6v6l4 2" />
+          </svg>
+        </span>
+        <div class="leading-tight">
+          <span class="block font-display text-lg font-bold text-white">Desentupidora</span>
+          <span class="block text-xs font-semibold tracking-wider text-white/80 uppercase">Rio de Janeiro</span>
+        </div>
+      </a>
+
+      <button
+        id="menu-close"
+        type="button"
+        class="inline-flex items-center justify-center rounded-lg p-2 text-white transition-all hover:bg-white/10 hover:scale-105 active:scale-95"
+        aria-label="Fechar menu"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+    </div>
+
+    <nav class="mt-12 flex flex-col items-center gap-8" aria-label="Navegação mobile">
+      {nav.map((item) => (
+        <a
+          href={item.href}
+          class="mobile-nav-link font-display text-3xl font-bold text-white transition-all hover:scale-105 hover:text-white/90"
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+
+    <div class="mt-auto flex flex-col items-center gap-4 pb-8">
+      <a
+        href="whatsappLink()"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mobile-nav-link inline-flex w-full max-w-xs items-center justify-center rounded-full bg-white px-8 py-4 text-lg font-bold text-accent shadow-xl transition-all hover:scale-105 hover:bg-white/90 active:scale-95"
+      >
+        Chamar no WhatsApp
+      </a>
+      <a
+        href="phoneLink()"
+        class="mobile-nav-link text-lg font-semibold text-white/90 transition-all hover:text-white"
+      >
+        (21) 99775-1577
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const close = document.getElementById('menu-close');
+  const menu = document.getElementById('mobile-menu');
+  const openIcon = document.getElementById('menu-icon-open');
+  const closeIcon = document.getElementById('menu-icon-close');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+  function openMenu() {
+    if (!menu || !openIcon || !closeIcon || !toggle) return;
+    menu.classList.remove('translate-x-full');
+    menu.setAttribute('aria-hidden', 'false');
+    toggle.setAttribute('aria-expanded', 'true');
+    openIcon.classList.add('hidden');
+    closeIcon.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    if (!menu || !openIcon || !closeIcon || !toggle) return;
+    menu.classList.add('translate-x-full');
+    menu.setAttribute('aria-hidden', 'true');
+    toggle.setAttribute('aria-expanded', 'false');
+    openIcon.classList.remove('hidden');
+    closeIcon.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+    isOpen ? closeMenu() : openMenu();
+  });
+
+  close?.addEventListener('click', closeMenu);
+  mobileLinks.forEach((link) => link.addEventListener('click', closeMenu));
+
+  // Fechar ao pressionar Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+  });
+</script>

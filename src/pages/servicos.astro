@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import Button from '../components/Button.astro';
+
+const allServices = await getCollection('servicos');
+const services = allServices.sort((a, b) => a.data.order - b.data.order);
+---
+
+<Layout
+  title="Serviços | Desentupidora Rio de Janeiro"
+  description="Conheça todos os serviços da Desentupidora Rio de Janeiro: esgoto, cano, pia, ralo, vaso sanitário, fossa e caixa de gordura.">
+  <section class="py-24 md:py-32">
+    <div class="container mx-auto px-6 lg:px-12">
+      <PageHeader
+        eyebrow="Serviços"
+        title="Desentupimento completo no Rio de Janeiro"
+        description="Do ralo ao esgoto, temos a solução certa para cada tipo de entupimento. Atendimento 24h com orçamento grátis."
+      />
+
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        {services.map((service) => (
+          <a href={`/servicos/${service.id.replace(/\.md$/, '').replace(/\//g, '-')}/`} class="block group">
+            <ServiceCard
+              title={service.data.title.replace(' no Rio de Janeiro', '')}
+              description={service.data.description}
+              icon={service.data.icon || ''}
+            />
+          </a>
+        ))}
+      </div>
+
+      <div class="mt-16 text-center">
+        <Button href="whatsappLink()" variant="accent" size="lg" target="_blank" rel="noopener noreferrer">
+          Pedir orçamento grátis
+        </Button>
+      </div>
+    </div>
+  </section>
+</Layout>

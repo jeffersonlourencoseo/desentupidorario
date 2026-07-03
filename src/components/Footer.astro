@@ -1,0 +1,71 @@
+---
+import { SITE_CONFIG, whatsappLink, phoneLink, emailLink } from '../data/config.ts';
+
+const year = new Date().getFullYear();
+
+const links = [
+  { label: 'Início', href: '/' },
+  { label: 'Serviços', href: '/servicos/' },
+  { label: 'Sobre', href: '/sobre/' },
+  { label: 'Blog', href: '/blog/' },
+  { label: 'Contato', href: '/contato/' },
+  { label: 'Privacidade', href: '/privacidade/' },
+  { label: 'Termos', href: '/termos/' },
+];
+---
+
+<footer class="border-t border-primary-100 bg-dark pt-24 pb-12 text-white" itemscope itemtype="https://schema.org/LocalBusiness">
+  <meta itemprop="name" content={SITE_CONFIG.legalName} />
+  <meta itemprop="description" content={SITE_CONFIG.description} />
+  <meta itemprop="telephone" content={SITE_CONFIG.phone} />
+  <meta itemprop="email" content={SITE_CONFIG.email} />
+  <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+    <meta itemprop="streetAddress" content={`${SITE_CONFIG.address.street}, ${SITE_CONFIG.address.number}`} />
+    <meta itemprop="addressLocality" content={SITE_CONFIG.address.city} />
+    <meta itemprop="addressRegion" content={SITE_CONFIG.address.state} />
+    <meta itemprop="postalCode" content={SITE_CONFIG.address.postalCode} />
+    <meta itemprop="addressCountry" content={SITE_CONFIG.address.country} />
+  </div>
+
+  <div class="container mx-auto px-6 lg:px-12">
+    <div class="grid gap-12 md:grid-cols-3">
+      <div class="space-y-5">
+        <div class="flex items-center gap-3">
+          <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary text-dark">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
+            </svg>
+          </span>
+          <span class="font-display text-lg font-bold">{SITE_CONFIG.siteName}</span>
+        </div>
+        <p class="text-sm leading-relaxed text-white/80">
+          Atendimento 24 horas em toda a cidade do Rio de Janeiro. Resolvemos
+          entupimentos com rapidez, equipamento profissional e garantia de serviço.
+        </p>
+      </div>
+
+      <div class="space-y-5">
+        <h3 class="font-display text-lg font-semibold">Contato</h3>
+        <ul class="space-y-3 text-sm text-white/80">
+          <li>WhatsApp: <a href={whatsappLink()} class="font-semibold text-white hover:text-secondary hover:underline transition-colors">SITE_CONFIG.phone.replace("+55", "")</a></li>
+          <li>E-mail: <a href={emailLink()} class="font-semibold text-white hover:text-secondary hover:underline transition-colors">{SITE_CONFIG.email}</a></li>
+          <li>{SITE_CONFIG.fullAddress}</li>
+        </ul>
+      </div>
+
+      <div class="space-y-5">
+        <h3 class="font-display text-lg font-semibold">Mapa do site</h3>
+        <ul class="space-y-3 text-sm text-white/80">
+          {links.map((link) => (
+            <li><a href={link.href} class="font-medium text-white hover:text-secondary hover:underline transition-colors">{link.label}</a></li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-16 border-t border-white/10 pt-8 text-center text-xs text-white/60">
+      © {year} {SITE_CONFIG.siteName}. Todos os direitos reservados.
+    </div>
+  </div>
+</footer>
