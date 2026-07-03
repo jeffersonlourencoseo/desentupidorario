@@ -27,7 +27,7 @@ export const SITE_CONFIG = {
   fullAddress: 'Av. Brasil, 10946 — Penha, Rio de Janeiro - RJ, 21012-350',
   openingHours: 'Mo-Su 00:00-23:59',
   priceRange: '$$',
-  cnpj: '[SUBSTITUIR: CNPJ da empresa]',
+  // cnpj: '[SUBSTITUIR: CNPJ da empresa - adicionar quando houver]',
 
   // Social / contato
   whatsappMessage: 'Olá! Preciso de uma desentupidora no Rio de Janeiro. Pode me ajudar?',
