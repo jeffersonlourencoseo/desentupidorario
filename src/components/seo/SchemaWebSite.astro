@@ -1,0 +1,37 @@
+---
+import { SITE_CONFIG } from '../../data/config.ts';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE_CONFIG.siteName,
+  url: SITE_CONFIG.domain,
+  description: SITE_CONFIG.description,
+  inLanguage: SITE_CONFIG.language,
+  publisher: {
+    '@type': 'LocalBusiness',
+    name: SITE_CONFIG.legalName,
+    url: SITE_CONFIG.domain,
+    telephone: SITE_CONFIG.phone,
+    email: SITE_CONFIG.email,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: `${SITE_CONFIG.address.street}, ${SITE_CONFIG.address.number}`,
+      addressLocality: SITE_CONFIG.address.city,
+      addressRegion: SITE_CONFIG.address.state,
+      postalCode: SITE_CONFIG.address.postalCode,
+      addressCountry: SITE_CONFIG.address.country,
+    },
+  },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${SITE_CONFIG.domain}/?s={search_term_string}`,
+    },
+    'query-input': 'required name=search_term_string',
+  },
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

@@ -16,6 +16,7 @@
         name="nome"
         type="text"
         required
+        autocomplete="name"
         class="w-full border-2 border-steel bg-concrete p-4 text-ink outline-none transition-all focus:border-ink focus:ring-2 focus:ring-ink/10"
         placeholder="Seu nome"
       />
@@ -27,6 +28,8 @@
         name="telefone"
         type="tel"
         required
+        inputmode="tel"
+        autocomplete="tel"
         class="w-full border-2 border-steel bg-concrete p-4 text-ink outline-none transition-all focus:border-ink focus:ring-2 focus:ring-ink/10"
         placeholder="(21) 99999-9999"
       />
@@ -39,6 +42,7 @@
       id="email"
       name="email"
       type="email"
+      autocomplete="email"
       class="w-full border-2 border-steel bg-concrete p-4 text-ink outline-none transition-all focus:border-ink focus:ring-2 focus:ring-ink/10"
       placeholder="seu@email.com"
     />
@@ -51,6 +55,7 @@
       name="endereco"
       type="text"
       required
+      autocomplete="street-address"
       class="w-full border-2 border-steel bg-concrete p-4 text-ink outline-none transition-all focus:border-ink focus:ring-2 focus:ring-ink/10"
       placeholder="Bairro e rua"
     />
@@ -90,6 +95,10 @@
     type="submit"
     class="w-full bg-alert p-5 text-base font-bold uppercase tracking-wide text-white shadow-[4px_4px_0px_0px_rgba(15,43,61,1)] transition-all hover:bg-alert-600 hover:shadow-[2px_2px_0px_0px_rgba(15,43,61,1)] hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-ink focus:ring-offset-2"
   >
-    Solicitar orçamento grátis
+    Receber orçamento grátis agora
   </button>
+
+  <p class="text-center text-xs text-muted">
+    Responderemos em poucos minutos. Atendimento 24h.
+  </p>
 </form>

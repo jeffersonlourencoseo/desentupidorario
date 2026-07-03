@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import ContactForm from '../components/forms/ContactForm.astro';
 import Button from '../components/Button.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import SchemaBreadcrumbs from '../components/seo/SchemaBreadcrumbs.astro';
 import { SITE_CONFIG, whatsappLink, phoneLink, emailLink } from '../data/config.ts';
 
 const channels = [
@@ -11,17 +13,26 @@ const channels = [
   { label: 'E-mail', value: SITE_CONFIG.email, href: emailLink() },
   { label: 'Endereço', value: SITE_CONFIG.fullAddress, href: '#' },
 ];
+
+const breadcrumbs = [
+  { name: 'Início', url: '/' },
+  { name: 'Contato', url: '/contato/', current: true },
+];
 ---
 
 <Layout
   title="Contato"
   description="Entre em contato com a Desentupidora Rio de Janeiro. Atendimento 24h por WhatsApp, telefone ou formulário.">
+
+  <SchemaBreadcrumbs items={breadcrumbs} />
+  <Breadcrumbs items={breadcrumbs} />
+
   <section class="py-24 md:py-32">
     <div class="container mx-auto px-6 lg:px-12">
       <PageHeader
         eyebrow="Contato"
         title="Fale com a Desentupidora RJ"
-        description="Escolha o canal mais fácil para você. Atendemos emergências 24 horas em toda a cidade do Rio de Janeiro."
+        description="Emergência de entupimento? Responderemos em minutos. Atendimento 24h por WhatsApp, telefone ou formulário."
       />
 
       <div class="grid gap-12 lg:grid-cols-2">
@@ -44,11 +55,14 @@ const channels = [
             <h2 class="mb-4 font-display text-3xl uppercase tracking-wide">Emergência agora?</h2>
             <p class="mb-6 text-white/70">
               Se o esgoto está voltando ou o vaso sanitário pode transbordar, chame nosso
-              atendimento emergencial direto pelo WhatsApp.
+              atendimento emergencial direto pelo WhatsApp. Respondemos em minutos.
             </p>
             <Button href={whatsappLink()} variant="secondary" size="lg" target="_blank" rel="noopener noreferrer">
               Chamar no WhatsApp
             </Button>
+            <a href={phoneLink()} class="mt-4 block text-center font-display text-2xl tracking-wide text-white transition-colors hover:text-alert">
+              {SITE_CONFIG.phone.replace('+55', '').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3')}
+            </a>
           </div>
         </div>
 

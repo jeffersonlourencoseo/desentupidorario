@@ -1,0 +1,61 @@
+---
+import { SITE_CONFIG } from '../../data/config.ts';
+
+interface Props {
+  name: string;
+  description: string;
+  url: string;
+  image?: string;
+}
+
+const { name, description, url, image = `${SITE_CONFIG.domain}/og-image.svg` } = Astro.props;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: name,
+  name,
+  description,
+  url,
+  image,
+  provider: {
+    '@type': 'LocalBusiness',
+    name: SITE_CONFIG.legalName,
+    url: SITE_CONFIG.domain,
+    telephone: SITE_CONFIG.phone,
+    email: SITE_CONFIG.email,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: `${SITE_CONFIG.address.street}, ${SITE_CONFIG.address.number}`,
+      addressLocality: SITE_CONFIG.address.city,
+      addressRegion: SITE_CONFIG.address.state,
+      postalCode: SITE_CONFIG.address.postalCode,
+      addressCountry: SITE_CONFIG.address.country,
+    },
+  },
+  areaServed: {
+    '@type': 'City',
+    name: SITE_CONFIG.city,
+    containedInPlace: {
+      '@type': 'State',
+      name: SITE_CONFIG.state,
+      containedInPlace: {
+        '@type': 'Country',
+        name: 'Brasil',
+      },
+    },
+  },
+  availableChannel: {
+    '@type': 'ServiceChannel',
+    serviceType: 'Atendimento por WhatsApp e telefone',
+    servicePhone: {
+      '@type': 'ContactPoint',
+      telephone: SITE_CONFIG.phone,
+      contactType: 'customer service',
+      availableLanguage: 'Portuguese',
+    },
+  },
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

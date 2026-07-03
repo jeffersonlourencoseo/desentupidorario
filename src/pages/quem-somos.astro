@@ -1,7 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Button from '../components/Button.astro';
-import { SITE_CONFIG, whatsappLink } from '../data/config.ts';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import SchemaBreadcrumbs from '../components/seo/SchemaBreadcrumbs.astro';
+import { whatsappLink } from '../data/config.ts';
 
 const stats = [
   { value: '+5', label: 'Anos de experiência' },
@@ -61,11 +63,19 @@ const team = [
   { role: 'Técnicos', text: 'Profissionais experientes com equipamento próprio para desentupimento, limpeza de fossa e caixa de gordura.' },
   { role: 'Pós-atendimento', text: 'Acompanha o resultado para garantir que o problema foi resolvido e que você ficou satisfeito.' },
 ];
+
+const breadcrumbs = [
+  { name: 'Início', url: '/' },
+  { name: 'Quem Somos', url: '/quem-somos/', current: true },
+];
 ---
 
 <Layout
   title="Quem Somos"
   description="Conheça a Desentupidora Rio de Janeiro. Anos de experiência, atendimento 24h em toda a cidade e compromisso real com cada cliente.">
+
+  <SchemaBreadcrumbs items={breadcrumbs} />
+  <Breadcrumbs items={breadcrumbs} />
 
   <!-- Hero -->
   <section class="relative overflow-hidden bg-ink py-24 text-white md:py-32">

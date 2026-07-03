@@ -2,6 +2,9 @@
 import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Button from '../../components/Button.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import SchemaBreadcrumbs from '../../components/seo/SchemaBreadcrumbs.astro';
+import SchemaService from '../../components/seo/SchemaService.astro';
 import { SITE_CONFIG, whatsappLink, phoneLink } from '../../data/config.ts';
 
 export async function getStaticPaths() {
@@ -17,11 +20,27 @@ const { Content } = await render(service);
 
 const serviceName = service.data.title.replace(' no Rio de Janeiro', '');
 const shortName = serviceName.replace('Desentupimento de ', '').replace('Limpeza de ', '');
+const slug = Astro.params.slug;
+const serviceUrl = `${SITE_CONFIG.domain}/servicos/${slug}/`;
+
+const breadcrumbs = [
+  { name: 'Início', url: '/' },
+  { name: 'Serviços', url: '/servicos/' },
+  { name: serviceName, url: `/servicos/${slug}/`, current: true },
+];
 ---
 
 <Layout
   title={service.data.title}
   description={service.data.description}>
+
+  <SchemaService
+    name={service.data.title}
+    description={service.data.description}
+    url={serviceUrl}
+  />
+  <SchemaBreadcrumbs items={breadcrumbs} />
+  <Breadcrumbs items={breadcrumbs} />
 
   <!-- Hero do serviço -->
   <section class="relative overflow-hidden bg-ink py-24 text-white md:py-32">

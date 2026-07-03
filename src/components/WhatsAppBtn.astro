@@ -7,7 +7,7 @@ import { whatsappLink, SITE_CONFIG } from '../data/config.ts';
   target="_blank"
   rel="noopener noreferrer"
   aria-label="Chamar no WhatsApp"
-  class="group fixed bottom-6 right-6 z-50 flex items-center gap-3 border-2 border-white bg-[#25D366] px-5 py-4 font-body font-bold uppercase tracking-wide text-white shadow-[6px_6px_0px_0px_rgba(15,43,61,1)] transition-all hover:-translate-y-1 hover:shadow-[3px_3px_0px_0px_rgba(15,43,61,1)] active:translate-y-0"
+  class="group fixed bottom-6 right-6 z-50 flex items-center gap-3 border-2 border-white bg-[#25D366] px-5 py-4 font-body font-bold uppercase tracking-wide text-white shadow-[6px_6px_0px_0px_rgba(15,43,61,1)] transition-all hover:-translate-y-1 hover:shadow-[3px_3px_0px_0px_rgba(15,43,61,1)] active:translate-y-0 sm:bottom-8 sm:right-8"
 >
   <span class="relative flex h-6 w-6 items-center justify-center">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -16,6 +16,6 @@ import { whatsappLink, SITE_CONFIG } from '../data/config.ts';
     <span class="absolute inset-0 rounded-full bg-white/30 animate-ping"></span>
   </span>
   <span class="hidden max-w-0 overflow-hidden whitespace-nowrap transition-all duration-300 group-hover:max-w-xs group-hover:pr-1 sm:inline-block">
-    {SITE_CONFIG.phone.replace('+55', '').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3')}
+    Orçamento grátis
   </span>
 </a>

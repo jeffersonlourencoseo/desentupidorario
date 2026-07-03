@@ -2,6 +2,8 @@
 import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Button from '../../components/Button.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import SchemaBreadcrumbs from '../../components/seo/SchemaBreadcrumbs.astro';
 import { SITE_CONFIG, whatsappLink, phoneLink } from '../../data/config.ts';
 
 export async function getStaticPaths() {
@@ -20,11 +22,22 @@ const relatedPosts = allPosts
   .filter((p) => p.id !== post.id)
   .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
   .slice(0, 3);
+
+const slug = Astro.params.slug;
+const breadcrumbs = [
+  { name: 'Início', url: '/' },
+  { name: 'Blog', url: '/blog/' },
+  { name: post.data.title, url: `/blog/${slug}/`, current: true },
+];
 ---
 
 <Layout
   title={post.data.title}
   description={post.data.description}>
+
+  <SchemaBreadcrumbs items={breadcrumbs} />
+  <Breadcrumbs items={breadcrumbs} />
+
   <article class="py-24 md:py-32">
     <div class="container mx-auto px-6 lg:px-12">
       <div class="grid gap-12 lg:grid-cols-3">

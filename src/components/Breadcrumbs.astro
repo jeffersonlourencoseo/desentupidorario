@@ -1,0 +1,32 @@
+---
+interface Item {
+  name: string;
+  url: string;
+  current?: boolean;
+}
+
+interface Props {
+  items: Item[];
+}
+
+const { items } = Astro.props;
+---
+
+<nav aria-label="Breadcrumb" class="border-b-2 border-steel bg-concrete">
+  <ol class="container mx-auto flex flex-wrap items-center gap-2 px-6 py-4 text-sm lg:px-12">
+    {
+      items.map((item, index) => (
+        <li class="flex items-center">
+          {index > 0 && <span class="mx-2 text-muted">/</span>}
+          {item.current ? (
+            <span class="font-bold text-ink" aria-current="page">{item.name}</span>
+          ) : (
+            <a href={item.url} class="font-medium text-muted transition-colors hover:text-alert hover:underline">
+              {item.name}
+            </a>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</nav>
