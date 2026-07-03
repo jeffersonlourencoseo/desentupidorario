@@ -1,5 +1,5 @@
 export const SITE_CONFIG = {
-  domain: 'https://desentupidorario.com.br',
+  domain: 'https://desentupidorario.vercel.app',
   siteName: 'Desentupidora Rio de Janeiro',
   tagline: 'Desentupidora no Rio de Janeiro com atendimento 24h',
   description:
