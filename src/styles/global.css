@@ -5,53 +5,55 @@
   --font-display: "Bebas Neue", ui-sans-serif, system-ui, sans-serif;
   --font-body: "Sora", ui-sans-serif, system-ui, sans-serif;
 
-  --color-ink: #0A1628;
-  --color-ink-50: #E7EAEE;
-  --color-ink-100: #C5CDD8;
-  --color-ink-700: #111E33;
-  --color-ink-800: #0D1424;
-  --color-ink-900: #0A1628;
+  --color-ink: #0F2B3D;
+  --color-ink-50: #E8EDF2;
+  --color-ink-100: #C8D4DD;
+  --color-ink-700: #162E3F;
+  --color-ink-800: #0F2B3D;
+  --color-ink-900: #091D2A;
 
-  --color-alert: #FF6B00;
-  --color-alert-50: #FFF0E6;
-  --color-alert-100: #FFD9C2;
-  --color-alert-600: #E55F00;
-  --color-alert-700: #B34A00;
+  --color-alert: #D95C1E;
+  --color-alert-50: #FCECE4;
+  --color-alert-100: #F5CDB8;
+  --color-alert-600: #B54B18;
+  --color-alert-700: #8F3A13;
 
-  --color-signal: #FFD200;
-  --color-signal-50: #FFF9E0;
-  --color-signal-100: #FFF0B3;
+  --color-signal: #E5A13D;
+  --color-signal-50: #FCF3E4;
+  --color-signal-100: #F5DDB8;
+  --color-signal-600: #C8842E;
+  --color-signal-700: #A06823;
 
-  --color-steel: #E5E7EB;
-  --color-steel-100: #D1D5DB;
-  --color-steel-600: #6B7280;
+  --color-steel: #E1E7EC;
+  --color-steel-100: #C5CDD6;
+  --color-steel-600: #7A8796;
 
-  --color-concrete: #F3F4F6;
+  --color-concrete: #F5F6F7;
   --color-paper: #FFFFFF;
-  --color-text: #111827;
-  --color-muted: #4B5563;
+  --color-text: #0F2B3D;
+  --color-muted: #5B6B7A;
 
   /* aliases para compatibilidade com componentes antigos */
-  --color-primary: #0A1628;
-  --color-primary-50: #E7EAEE;
-  --color-primary-100: #C5CDD8;
-  --color-primary-600: #111E33;
-  --color-primary-700: #0D1424;
+  --color-primary: #0F2B3D;
+  --color-primary-50: #E8EDF2;
+  --color-primary-100: #C8D4DD;
+  --color-primary-600: #162E3F;
+  --color-primary-700: #0F2B3D;
 
-  --color-secondary: #FF6B00;
-  --color-secondary-50: #FFF0E6;
-  --color-secondary-100: #FFD9C2;
-  --color-secondary-600: #E55F00;
-  --color-secondary-700: #B34A00;
+  --color-secondary: #D95C1E;
+  --color-secondary-50: #FCECE4;
+  --color-secondary-100: #F5CDB8;
+  --color-secondary-600: #B54B18;
+  --color-secondary-700: #8F3A13;
 
-  --color-accent: #FFD200;
-  --color-accent-50: #FFF9E0;
-  --color-accent-100: #FFF0B3;
-  --color-accent-600: #E5BD00;
-  --color-accent-700: #B29300;
+  --color-accent: #E5A13D;
+  --color-accent-50: #FCF3E4;
+  --color-accent-100: #F5DDB8;
+  --color-accent-600: #C8842E;
+  --color-accent-700: #A06823;
 
-  --color-dark: #0A1628;
-  --color-light: #F3F4F6;
+  --color-dark: #0F2B3D;
+  --color-light: #F5F6F7;
 }
 
 html {

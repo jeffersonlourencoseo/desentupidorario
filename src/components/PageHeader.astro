@@ -10,12 +10,12 @@ interface Props {
 const { eyebrow, title, description, centered = true, light = false } = Astro.props;
 
 const textColor = light ? 'text-white' : 'text-ink';
-const mutedColor = light ? 'text-white/80' : 'text-muted';
+const mutedColor = light ? 'text-white/70' : 'text-muted';
 ---
 
 <div class:list={["mb-16 max-w-3xl", centered && "mx-auto text-center"]}>
   {eyebrow && (
-    <span class:list={["mb-4 inline-block border-2 border-alert bg-alert px-3 py-1 text-xs font-bold uppercase tracking-wider text-white", light && "border-signal bg-signal text-ink"]}>
+    <span class:list={["mb-4 inline-block border border-alert bg-alert px-3 py-1 text-xs font-bold uppercase tracking-wider text-white", light && "border-white/30 bg-white/10 text-white"]}>
       {eyebrow}
     </span>
   )}

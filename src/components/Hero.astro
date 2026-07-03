@@ -4,8 +4,8 @@ import { whatsappLink } from '../data/config.ts';
 ---
 
 <section class="relative overflow-hidden bg-ink py-20 text-white md:py-28">
-  <!-- Padrão de grade / tubulação -->
-  <div class="absolute inset-0 opacity-10" aria-hidden="true">
+  <!-- Padrão de grade sutil -->
+  <div class="absolute inset-0 opacity-[0.06]" aria-hidden="true">
     <svg class="h-full w-full" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
@@ -16,16 +16,15 @@ import { whatsappLink } from '../data/config.ts';
     </svg>
   </div>
 
-  <!-- Faixa diagonal alerta -->
-  <div class="absolute -right-20 top-0 h-[140%] w-32 -rotate-12 bg-alert/80 md:w-48" aria-hidden="true"></div>
-  <div class="absolute -left-10 bottom-0 h-48 w-[140%] -rotate-6 bg-signal/10 md:h-64" aria-hidden="true"></div>
+  <div class="absolute -right-20 top-0 h-[140%] w-24 -rotate-12 bg-alert/90 md:w-36" aria-hidden="true"></div>
+  <div class="absolute -left-10 bottom-0 h-48 w-[140%] -rotate-6 bg-white/5 md:h-64" aria-hidden="true"></div>
 
   <div class="container relative mx-auto px-6 lg:px-12">
     <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
       <div class="max-w-2xl">
-        <div class="mb-6 inline-flex items-center gap-3 border-2 border-signal bg-signal/10 px-4 py-2">
+        <div class="mb-6 inline-flex items-center gap-3 border border-white/20 bg-white/5 px-4 py-2">
           <span class="h-3 w-3 animate-pulse bg-alert"></span>
-          <span class="text-sm font-bold uppercase tracking-wider text-signal">Atendimento 24h no Rio</span>
+          <span class="text-sm font-bold uppercase tracking-wider text-white/90">Atendimento 24h no Rio</span>
         </div>
 
         <h1 class="font-display text-6xl font-normal uppercase leading-[0.9] tracking-wide md:text-8xl">
@@ -33,7 +32,7 @@ import { whatsappLink } from '../data/config.ts';
           <span class="block text-alert">Rio de Janeiro</span>
         </h1>
 
-        <p class="mt-8 max-w-xl text-lg leading-relaxed text-white/80 md:text-xl">
+        <p class="mt-8 max-w-xl text-lg leading-relaxed text-white/70 md:text-xl">
           Resolvemos entupimentos de esgoto, canos, pias, ralos, vasos sanitários, fossas e caixas de gordura.
           Chegamos rápido em toda a cidade, com orçamento grátis e garantia no serviço.
         </p>
@@ -49,8 +48,8 @@ import { whatsappLink } from '../data/config.ts';
       </div>
 
       <div class="relative">
-        <div class="absolute -inset-4 border-2 border-alert/30 md:-inset-6"></div>
-        <div class="relative border-4 border-white bg-white p-8 text-ink shadow-[12px_12px_0px_0px_rgba(255,107,0,1)] md:p-12">
+        <div class="absolute -inset-4 border border-white/20"></div>
+        <div class="relative border-2 border-white bg-white p-8 text-ink shadow-[12px_12px_0px_0px_rgba(217,92,30,1)] md:p-12">
           <div class="mb-6 flex items-center gap-3">
             <span class="flex h-10 w-10 items-center justify-center bg-alert text-white">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
@@ -80,7 +79,7 @@ import { whatsappLink } from '../data/config.ts';
           </div>
 
           <div class="mt-8 border-t-2 border-steel pt-6">
-            <div class="font-body text-sm font-bold uppercase tracking-wide text-muted">WhatsApp</div>
+            <div class="font-body text-xs font-bold uppercase tracking-wider text-muted">WhatsApp</div>
             <a href={whatsappLink()} class="mt-1 block font-display text-4xl text-alert transition-colors hover:text-alert-600">
               (21) 99775-1577
             </a>

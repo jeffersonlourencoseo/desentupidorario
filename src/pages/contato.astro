@@ -6,8 +6,8 @@ import Button from '../components/Button.astro';
 import { SITE_CONFIG, whatsappLink, phoneLink, emailLink } from '../data/config.ts';
 
 const channels = [
-  { label: 'WhatsApp', value: SITE_CONFIG.phone.replace('+55', ''), href: whatsappLink() },
-  { label: 'Telefone', value: SITE_CONFIG.phone.replace('+55', ''), href: phoneLink() },
+  { label: 'WhatsApp', value: SITE_CONFIG.phone.replace('+55', '').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3'), href: whatsappLink() },
+  { label: 'Telefone', value: SITE_CONFIG.phone.replace('+55', '').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3'), href: phoneLink() },
   { label: 'E-mail', value: SITE_CONFIG.email, href: emailLink() },
   { label: 'Endereço', value: SITE_CONFIG.fullAddress, href: '#' },
 ];
@@ -26,13 +26,13 @@ const channels = [
 
       <div class="grid gap-12 lg:grid-cols-2">
         <div class="space-y-8">
-          <div class="rounded-2xl border border-primary-100 bg-white p-10">
-            <h2 class="mb-8 font-display text-2xl font-bold text-text">Canais de atendimento</h2>
+          <div class="border-2 border-steel bg-white p-10">
+            <h2 class="mb-8 font-display text-3xl uppercase tracking-wide text-ink">Canais de atendimento</h2>
             <ul class="space-y-6">
               {channels.map((channel) => (
                 <li class="flex flex-col gap-1">
-                  <span class="text-xs font-bold tracking-wider text-primary-700 uppercase">{channel.label}</span>
-                  <a href={channel.href} class="text-lg font-semibold text-text hover:text-primary">
+                  <span class="text-xs font-bold uppercase tracking-wider text-muted">{channel.label}</span>
+                  <a href={channel.href} class="text-lg font-semibold text-ink hover:text-alert transition-colors">
                     {channel.value}
                   </a>
                 </li>
@@ -40,13 +40,13 @@ const channels = [
             </ul>
           </div>
 
-          <div class="rounded-2xl bg-dark p-10 text-white">
-            <h2 class="mb-4 font-display text-2xl font-bold">Emergência agora?</h2>
-            <p class="mb-6 text-slate-300">
+          <div class="border-2 border-alert bg-ink p-10 text-white">
+            <h2 class="mb-4 font-display text-3xl uppercase tracking-wide">Emergência agora?</h2>
+            <p class="mb-6 text-white/70">
               Se o esgoto está voltando ou o vaso sanitário pode transbordar, chame nosso
               atendimento emergencial direto pelo WhatsApp.
             </p>
-            <Button href={whatsappLink()} variant="accent" size="lg" target="_blank" rel="noopener noreferrer">
+            <Button href={whatsappLink()} variant="secondary" size="lg" target="_blank" rel="noopener noreferrer">
               Chamar no WhatsApp
             </Button>
           </div>
