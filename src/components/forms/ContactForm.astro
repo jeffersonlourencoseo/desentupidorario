@@ -1,28 +1,28 @@
 ---
 ---
 
-<form class="space-y-5 border-2 border-steel bg-white p-8 shadow-[6px_6px_0px_0px_rgba(225,231,236,1)] md:p-10" name="contato" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+<form class="space-y-4 border-2 border-steel bg-white p-5 shadow-[3px_3px_0px_0px_rgba(225,231,236,1)] sm:space-y-5 sm:p-8 md:p-10" name="contato" method="POST" data-netlify="true" netlify-honeypot="bot-field">
   <p class="hidden">
     <label>
       Não preencha: <input name="bot-field" />
     </label>
   </p>
 
-  <div class="grid gap-5 sm:grid-cols-2">
-    <div class="space-y-2">
-      <label for="nome" class="text-sm font-bold uppercase tracking-wider text-muted">Nome</label>
+  <div class="grid gap-4 sm:grid-cols-2 sm:gap-5">
+    <div class="space-y-1.5 sm:space-y-2">
+      <label for="nome" class="text-xs font-bold uppercase tracking-wider text-muted">Nome</label>
       <input
         id="nome"
         name="nome"
         type="text"
         required
         autocomplete="name"
-        class="w-full border-2 border-steel bg-concrete p-4 text-ink outline-none transition-all focus:border-ink focus:ring-2 focus:ring-ink/10"
+        class="w-full border-2 border-steel bg-concrete p-3 text-ink outline-none transition-all focus:border-ink focus:ring-2 focus:ring-ink/10 sm:p-4"
         placeholder="Seu nome"
       />
     </div>
-    <div class="space-y-2">
-      <label for="telefone" class="text-sm font-bold uppercase tracking-wider text-muted">Telefone / WhatsApp</label>
+    <div class="space-y-1.5 sm:space-y-2">
+      <label for="telefone" class="text-xs font-bold uppercase tracking-wider text-muted">Telefone / WhatsApp</label>
       <input
         id="telefone"
         name="telefone"
@@ -30,43 +30,43 @@
         required
         inputmode="tel"
         autocomplete="tel"
-        class="w-full border-2 border-steel bg-concrete p-4 text-ink outline-none transition-all focus:border-ink focus:ring-2 focus:ring-ink/10"
+        class="w-full border-2 border-steel bg-concrete p-3 text-ink outline-none transition-all focus:border-ink focus:ring-2 focus:ring-ink/10 sm:p-4"
         placeholder="(21) 99999-9999"
       />
     </div>
   </div>
 
-  <div class="space-y-2">
-    <label for="email" class="text-sm font-bold uppercase tracking-wider text-muted">E-mail</label>
+  <div class="space-y-1.5 sm:space-y-2">
+    <label for="email" class="text-xs font-bold uppercase tracking-wider text-muted">E-mail</label>
     <input
       id="email"
       name="email"
       type="email"
       autocomplete="email"
-      class="w-full border-2 border-steel bg-concrete p-4 text-ink outline-none transition-all focus:border-ink focus:ring-2 focus:ring-ink/10"
+      class="w-full border-2 border-steel bg-concrete p-3 text-ink outline-none transition-all focus:border-ink focus:ring-2 focus:ring-ink/10 sm:p-4"
       placeholder="seu@email.com"
     />
   </div>
 
-  <div class="space-y-2">
-    <label for="endereco" class="text-sm font-bold uppercase tracking-wider text-muted">Endereço no Rio de Janeiro</label>
+  <div class="space-y-1.5 sm:space-y-2">
+    <label for="endereco" class="text-xs font-bold uppercase tracking-wider text-muted">Endereço no Rio de Janeiro</label>
     <input
       id="endereco"
       name="endereco"
       type="text"
       required
       autocomplete="street-address"
-      class="w-full border-2 border-steel bg-concrete p-4 text-ink outline-none transition-all focus:border-ink focus:ring-2 focus:ring-ink/10"
+      class="w-full border-2 border-steel bg-concrete p-3 text-ink outline-none transition-all focus:border-ink focus:ring-2 focus:ring-ink/10 sm:p-4"
       placeholder="Bairro e rua"
     />
   </div>
 
-  <div class="space-y-2">
-    <label for="servico" class="text-sm font-bold uppercase tracking-wider text-muted">Serviço necessário</label>
+  <div class="space-y-1.5 sm:space-y-2">
+    <label for="servico" class="text-xs font-bold uppercase tracking-wider text-muted">Serviço necessário</label>
     <select
       id="servico"
       name="servico"
-      class="w-full border-2 border-steel bg-concrete p-4 text-ink outline-none transition-all focus:border-ink focus:ring-2 focus:ring-ink/10"
+      class="w-full border-2 border-steel bg-concrete p-3 text-ink outline-none transition-all focus:border-ink focus:ring-2 focus:ring-ink/10 sm:p-4"
     >
       <option value="">Selecione um serviço</option>
       <option value="desentupimento-de-esgoto">Desentupimento de esgoto</option>
@@ -80,20 +80,20 @@
     </select>
   </div>
 
-  <div class="space-y-2">
-    <label for="mensagem" class="text-sm font-bold uppercase tracking-wider text-muted">Mensagem</label>
+  <div class="space-y-1.5 sm:space-y-2">
+    <label for="mensagem" class="text-xs font-bold uppercase tracking-wider text-muted">Mensagem</label>
     <textarea
       id="mensagem"
       name="mensagem"
       rows="4"
-      class="w-full border-2 border-steel bg-concrete p-4 text-ink outline-none transition-all focus:border-ink focus:ring-2 focus:ring-ink/10"
+      class="w-full border-2 border-steel bg-concrete p-3 text-ink outline-none transition-all focus:border-ink focus:ring-2 focus:ring-ink/10 sm:p-4"
       placeholder="Descreva o problema com o máximo de detalhes"
     ></textarea>
   </div>
 
   <button
     type="submit"
-    class="w-full bg-alert p-5 text-base font-bold uppercase tracking-wide text-white shadow-[4px_4px_0px_0px_rgba(15,43,61,1)] transition-all hover:bg-alert-600 hover:shadow-[2px_2px_0px_0px_rgba(15,43,61,1)] hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-ink focus:ring-offset-2"
+    class="w-full bg-alert-700 p-4 text-sm font-bold uppercase tracking-wide text-white shadow-[4px_4px_0px_0px_rgba(15,43,61,1)] transition-all hover:bg-alert-900 hover:shadow-[2px_2px_0px_0px_rgba(15,43,61,1)] hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-ink focus:ring-offset-2 sm:p-5 sm:text-base"
   >
     Receber orçamento grátis agora
   </button>

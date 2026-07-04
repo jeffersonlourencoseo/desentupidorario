@@ -14,7 +14,7 @@ const links = [
 ];
 ---
 
-<footer class="border-t-4 border-steel bg-ink pt-20 pb-10 text-white" itemscope itemtype="https://schema.org/LocalBusiness">
+<footer class="border-t-4 border-steel bg-ink pt-14 pb-20 text-white sm:pt-20 sm:pb-24" itemscope itemtype="https://schema.org/LocalBusiness">
   <meta itemprop="name" content={SITE_CONFIG.legalName} />
   <meta itemprop="description" content={SITE_CONFIG.description} />
   <meta itemprop="telephone" content={SITE_CONFIG.phone} />
@@ -27,22 +27,22 @@ const links = [
     <meta itemprop="addressCountry" content={SITE_CONFIG.address.country} />
   </div>
 
-  <div class="container mx-auto px-6 lg:px-12">
-    <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-12">
+    <div class="grid gap-10 sm:gap-12 md:grid-cols-2 lg:grid-cols-4">
       <div class="lg:col-span-2">
         <div class="flex items-center gap-3">
-          <span class="flex h-12 w-12 items-center justify-center border-2 border-white bg-white text-ink">
-            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
+          <span class="flex h-10 w-10 items-center justify-center border-2 border-white bg-white text-ink sm:h-12 sm:w-12">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
               <circle cx="12" cy="12" r="9" />
               <path d="M12 7v5l4 2" />
             </svg>
           </span>
           <div class="leading-none">
-            <span class="block font-display text-3xl tracking-wide">DESENTUPIDORA</span>
-            <span class="block text-xs font-bold tracking-[0.2em] text-white/50 uppercase">Rio de Janeiro</span>
+            <span class="block font-display text-2xl tracking-wide">DESENTUPIDORA</span>
+            <span class="block text-[10px] font-bold tracking-[0.2em] text-white/50 uppercase sm:text-xs">Rio de Janeiro</span>
           </div>
         </div>
-        <p class="mt-6 max-w-md text-base leading-relaxed text-white/60">
+        <p class="mt-5 max-w-md text-sm leading-relaxed text-white/60 sm:mt-6 sm:text-base">
           Atendimento 24 horas em toda a cidade do Rio de Janeiro. Resolvemos entupimentos com rapidez,
           equipamento profissional e garantia de serviço.
         </p>
@@ -50,38 +50,38 @@ const links = [
           href={whatsappLink()}
           target="_blank"
           rel="noopener noreferrer"
-          class="mt-6 inline-flex items-center gap-2 bg-alert px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-all hover:-translate-y-0.5 active:translate-y-0"
+          class="mt-5 inline-flex items-center gap-2 bg-alert-700 px-5 py-2.5 text-xs font-bold uppercase tracking-wide text-white transition-all hover:-translate-y-0.5 active:translate-y-0 sm:mt-6 sm:px-6 sm:py-3 sm:text-sm"
         >
           Chamar no WhatsApp
         </a>
       </div>
 
       <div>
-        <h3 class="mb-5 font-display text-xl uppercase tracking-wide text-white">Mapa do site</h3>
-        <ul class="space-y-3 text-sm">
+        <h3 class="mb-4 font-display text-lg uppercase tracking-wide text-white sm:mb-5 sm:text-xl">Mapa do site</h3>
+        <ul class="space-y-2.5 text-sm">
           {links.map((link) => (
             <li>
-              <a href={link.href} class="font-medium text-white/70 transition-colors hover:text-alert hover:underline">{link.label}</a>
+              <a href={link.href} class="font-medium text-white/70 transition-colors hover:text-signal hover:underline">{link.label}</a>
             </li>
           ))}
         </ul>
       </div>
 
       <div>
-        <h3 class="mb-5 font-display text-xl uppercase tracking-wide text-white">Contato</h3>
-        <ul class="space-y-4 text-sm">
+        <h3 class="mb-4 font-display text-lg uppercase tracking-wide text-white sm:mb-5 sm:text-xl">Contato</h3>
+        <ul class="space-y-3 text-sm">
           <li class="flex flex-col">
-            <span class="text-xs font-bold uppercase tracking-wide text-white/40">WhatsApp</span>
-            <a href={whatsappLink()} class="text-lg font-bold text-white transition-colors hover:text-alert">
+            <span class="text-xs font-bold uppercase tracking-wide text-white/70">WhatsApp</span>
+            <a href={whatsappLink()} class="text-base font-bold text-white transition-colors hover:text-alert sm:text-lg">
               {SITE_CONFIG.phone.replace('+55', '').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3')}
             </a>
           </li>
           <li class="flex flex-col">
-            <span class="text-xs font-bold uppercase tracking-wide text-white/40">E-mail</span>
+            <span class="text-xs font-bold uppercase tracking-wide text-white/70">E-mail</span>
             <a href={emailLink()} class="font-medium text-white transition-colors hover:text-alert">{SITE_CONFIG.email}</a>
           </li>
           <li class="flex flex-col">
-            <span class="text-xs font-bold uppercase tracking-wide text-white/40">Endereço</span>
+            <span class="text-xs font-bold uppercase tracking-wide text-white/70">Endereço</span>
             <a href={mapsLink()} target="_blank" rel="noopener noreferrer" class="font-medium text-white transition-colors hover:text-alert">
               {SITE_CONFIG.fullAddress}
             </a>
@@ -90,11 +90,11 @@ const links = [
       </div>
     </div>
 
-    <div class="mt-16 border-t-2 border-white/10 pt-8 flex flex-col items-center justify-between gap-4 md:flex-row">
-      <p class="text-center text-xs text-white/40 md:text-left">
+    <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t-2 border-white/10 pt-6 sm:mt-16 sm:pt-8 md:flex-row">
+      <p class="text-center text-xs text-white/70 md:text-left">
         © {year} {SITE_CONFIG.siteName}. Todos os direitos reservados.
       </p>
-      <div class="flex gap-6 text-xs font-bold uppercase tracking-wide text-white/40">
+      <div class="flex gap-4 text-xs font-bold uppercase tracking-wide text-white/70 sm:gap-6">
         <a href="/privacidade/" class="transition-colors hover:text-alert">Privacidade</a>
         <a href="/termos/" class="transition-colors hover:text-alert">Termos</a>
       </div>

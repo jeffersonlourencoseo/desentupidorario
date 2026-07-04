@@ -8,15 +8,15 @@ interface Props {
 const { title, description, icon } = Astro.props;
 ---
 
-<article class="group relative border-2 border-steel bg-white p-8 shadow-[6px_6px_0px_0px_rgba(225,231,236,1)] transition-all hover:-translate-y-1 hover:border-ink hover:shadow-[10px_10px_0px_0px_rgba(15,43,61,1)]">
-  <div class="mb-6 flex h-14 w-14 items-center justify-center border-2 border-steel bg-concrete text-ink transition-all group-hover:bg-ink group-hover:text-white group-hover:border-ink">
+<article class="group relative border-2 border-steel bg-white p-5 shadow-[3px_3px_0px_0px_rgba(225,231,236,1)] transition-all hover:-translate-y-1 hover:border-ink hover:shadow-[6px_6px_0px_0px_rgba(15,43,61,1)] sm:p-8">
+  <div class="mb-4 flex h-12 w-12 items-center justify-center border-2 border-steel bg-concrete text-ink transition-all group-hover:border-ink group-hover:bg-ink group-hover:text-white sm:mb-6 sm:h-14 sm:w-14">
     <slot name="icon">
       <span set:html={icon} />
     </slot>
   </div>
-  <h3 class="mb-3 font-display text-2xl uppercase tracking-wide text-ink">{title}</h3>
-  <p class="text-base leading-relaxed text-muted">{description}</p>
-  <div class="mt-6 flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-alert transition-colors group-hover:text-alert-600">
+  <h3 class="mb-2 font-display text-xl uppercase tracking-wide text-ink sm:mb-3 sm:text-2xl">{title}</h3>
+  <p class="text-sm leading-relaxed text-muted sm:text-base">{description}</p>
+  <div class="mt-4 flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-alert-700 transition-colors group-hover:text-alert-900 sm:mt-6 sm:text-sm">
     Saiba mais
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
       <path d="M5 12h14M12 5l7 7-7 7" />

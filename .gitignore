@@ -36,3 +36,5 @@ Thumbs.db
 
 # Relatórios Lighthouse
 lighthouse*.json
+lh-*.json
+contrast-details.txt

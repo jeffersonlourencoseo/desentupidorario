@@ -74,9 +74,34 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 ::selection {
   background-color: var(--color-alert);
   color: white;
+}
+
+/* Fontes fluidas para títulos — evita palavras cortadas em telas pequenas */
+.text-hero {
+  font-size: clamp(2.25rem, 10vw, 5rem);
+}
+
+.text-section {
+  font-size: clamp(1.75rem, 7vw, 3.75rem);
+}
+
+.text-page {
+  font-size: clamp(2rem, 8vw, 4.5rem);
+}
+
+/* Garante quebra de palavras longas em telas pequenas */
+.break-safe {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }

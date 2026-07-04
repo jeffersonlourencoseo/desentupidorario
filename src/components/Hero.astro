@@ -3,9 +3,9 @@ import Button from './Button.astro';
 import { whatsappLink } from '../data/config.ts';
 ---
 
-<section class="relative overflow-hidden bg-ink py-20 text-white md:py-28">
+<section class="relative overflow-hidden bg-ink py-14 text-white sm:py-20 md:py-28">
   <!-- Padrão de grade sutil -->
-  <div class="absolute inset-0 opacity-[0.06]" aria-hidden="true">
+  <div class="absolute inset-0 opacity-[0.03]" aria-hidden="true">
     <svg class="h-full w-full" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
@@ -16,71 +16,71 @@ import { whatsappLink } from '../data/config.ts';
     </svg>
   </div>
 
-  <div class="absolute -right-20 top-0 h-[140%] w-24 -rotate-12 bg-alert/90 md:w-36" aria-hidden="true"></div>
-  <div class="absolute -left-10 bottom-0 h-48 w-[140%] -rotate-6 bg-white/5 md:h-64" aria-hidden="true"></div>
+  <div class="absolute -right-10 top-0 h-[120%] w-10 -rotate-12 bg-alert/50 sm:-right-16 sm:w-16 md:w-28" aria-hidden="true"></div>
+  <div class="absolute -left-6 bottom-0 h-24 w-[120%] -rotate-6 bg-white/[0.03] sm:h-40 md:h-56" aria-hidden="true"></div>
 
-  <div class="container relative mx-auto px-6 lg:px-12">
-    <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+  <div class="container relative mx-auto px-4 sm:px-6 lg:px-12">
+    <div class="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-10">
       <div class="max-w-2xl">
-        <div class="mb-6 inline-flex items-center gap-3 border border-white/20 bg-white/5 px-4 py-2">
-          <span class="h-3 w-3 animate-pulse bg-alert"></span>
-          <span class="text-sm font-bold uppercase tracking-wider text-white/90">Atendimento 24h no Rio</span>
+        <div class="mb-4 inline-flex items-center gap-2 border border-white/15 bg-white/[0.04] px-3 py-1.5 sm:mb-6 sm:gap-3 sm:px-4 sm:py-2">
+          <span class="h-2.5 w-2.5 animate-pulse bg-alert sm:h-3 sm:w-3"></span>
+          <span class="text-xs font-bold uppercase tracking-wider text-white/90">Atendimento 24h no Rio</span>
         </div>
 
-        <h1 class="font-display text-6xl font-normal uppercase leading-[0.9] tracking-wide md:text-8xl">
+        <h1 class="font-display text-hero font-normal uppercase leading-[0.92] tracking-wide break-safe sm:text-6xl md:text-7xl lg:text-8xl">
           Desentupidora{' '}
-          <span class="block text-alert">Rio de Janeiro</span>
+          <span class="block text-signal">Rio de Janeiro</span>
         </h1>
 
-        <p class="mt-8 max-w-xl text-lg leading-relaxed text-white/70 md:text-xl">
+        <p class="mt-5 max-w-xl text-base leading-relaxed text-white/90 sm:mt-7 sm:text-lg md:mt-8 md:text-xl">
           Resolvemos entupimentos de esgoto, canos, pias, ralos, vasos sanitários, fossas e caixas de gordura.
           Chegamos rápido em toda a cidade, com orçamento grátis e garantia no serviço.
         </p>
 
-        <div class="mt-10 flex flex-col gap-4 sm:flex-row">
-          <Button href={whatsappLink()} variant="secondary" size="lg" target="_blank" rel="noopener noreferrer">
+        <div class="mt-7 flex flex-col gap-3 sm:flex-row sm:gap-4 md:mt-8">
+          <Button href={whatsappLink()} variant="secondary" size="lg" target="_blank" rel="noopener noreferrer" class="text-sm sm:text-base">
             Chamar agora — orçamento grátis
           </Button>
-          <Button href="/servicos/" variant="outline" size="lg">
+          <Button href="/servicos/" variant="outline" size="lg" class="text-sm sm:text-base">
             Ver serviços
           </Button>
         </div>
       </div>
 
       <div class="relative">
-        <div class="absolute -inset-4 border border-white/20"></div>
-        <div class="relative border-2 border-white bg-white p-8 text-ink shadow-[12px_12px_0px_0px_rgba(217,92,30,1)] md:p-12">
-          <div class="mb-6 flex items-center gap-3">
-            <span class="flex h-10 w-10 items-center justify-center bg-alert text-white">
+        <div class="absolute -inset-2 border border-white/15 sm:-inset-3 sm:border-white/20 md:-inset-4"></div>
+        <div class="relative border-2 border-white bg-white p-4 text-ink shadow-[4px_4px_0px_0px_rgba(217,92,30,1)] sm:p-7 sm:shadow-[8px_8px_0px_0px_rgba(217,92,30,1)] md:p-12">
+          <div class="mb-3 flex items-center gap-2 sm:mb-5 sm:gap-3">
+            <span class="flex h-8 w-8 items-center justify-center bg-alert text-white sm:h-10 sm:w-10">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
               </svg>
             </span>
-            <span class="font-display text-2xl uppercase tracking-wide">Emergência 24h</span>
+            <span class="font-display text-lg uppercase tracking-wide text-ink sm:text-2xl">Emergência 24h</span>
           </div>
 
-          <div class="space-y-4">
-            <div class="flex items-start gap-3">
+          <div class="space-y-2 sm:space-y-3">
+            <div class="flex items-start gap-2 sm:gap-3">
               <span class="mt-1 text-alert">✓</span>
-              <span class="font-body text-muted">Atendimento em toda a cidade do Rio</span>
+              <span class="font-body text-sm text-muted sm:text-base">Atendimento em toda a cidade do Rio</span>
             </div>
-            <div class="flex items-start gap-3">
+            <div class="flex items-start gap-2 sm:gap-3">
               <span class="mt-1 text-alert">✓</span>
-              <span class="font-body text-muted">Orçamento grátis antes de executar</span>
+              <span class="font-body text-sm text-muted sm:text-base">Orçamento grátis antes de executar</span>
             </div>
-            <div class="flex items-start gap-3">
+            <div class="flex items-start gap-2 sm:gap-3">
               <span class="mt-1 text-alert">✓</span>
-              <span class="font-body text-muted">Equipamento profissional para cada caso</span>
+              <span class="font-body text-sm text-muted sm:text-base">Equipamento profissional para cada caso</span>
             </div>
-            <div class="flex items-start gap-3">
+            <div class="flex items-start gap-2 sm:gap-3">
               <span class="mt-1 text-alert">✓</span>
-              <span class="font-body text-muted">Garantia real no serviço feito</span>
+              <span class="font-body text-sm text-muted sm:text-base">Garantia real no serviço feito</span>
             </div>
           </div>
 
-          <div class="mt-8 border-t-2 border-steel pt-6">
+          <div class="mt-5 border-t-2 border-steel pt-3 sm:mt-7 sm:pt-5 md:mt-8">
             <div class="font-body text-xs font-bold uppercase tracking-wider text-muted">WhatsApp 24h</div>
-            <a href={whatsappLink()} class="mt-1 block font-display text-4xl text-alert transition-colors hover:text-alert-600">
+            <a href={whatsappLink()} class="mt-1 block font-display text-2xl text-alert-700 transition-colors hover:text-alert-900 sm:text-3xl md:text-4xl">
               (21) 99775-1577
             </a>
           </div>

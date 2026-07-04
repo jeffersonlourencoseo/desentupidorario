@@ -13,17 +13,17 @@ const textColor = light ? 'text-white' : 'text-ink';
 const mutedColor = light ? 'text-white/70' : 'text-muted';
 ---
 
-<div class:list={["mb-16 max-w-3xl", centered && "mx-auto text-center"]}>
+<div class:list={["mb-12 max-w-3xl md:mb-16", centered && "mx-auto text-center"]}>
   {eyebrow && (
-    <span class:list={["mb-4 inline-block border border-alert bg-alert px-3 py-1 text-xs font-bold uppercase tracking-wider text-white", light && "border-white/30 bg-white/10 text-white"]}>
+    <span class:list={["mb-3 inline-block border border-alert-600 bg-alert-700 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white md:mb-4", light && "border-white/30 bg-white/10 text-white"]}>
       {eyebrow}
     </span>
   )}
-  <h1 class:list={["font-display text-5xl uppercase leading-[0.9] tracking-wide md:text-6xl lg:text-7xl", textColor]}>
+  <h1 class:list={["font-display text-page uppercase leading-[0.92] tracking-wide break-safe sm:text-5xl md:text-6xl lg:text-7xl", textColor]}>
     {title}
   </h1>
   {description && (
-    <p class:list={["mt-6 text-lg leading-relaxed", mutedColor]}>
+    <p class:list={["mt-4 text-base leading-relaxed sm:text-lg md:mt-6", mutedColor]}>
       {description}
     </p>
   )}

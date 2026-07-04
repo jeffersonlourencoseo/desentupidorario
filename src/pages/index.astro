@@ -43,23 +43,23 @@ const testimonials = [
   <Hero />
 
   <!-- Diferenciais -->
-  <section class="border-b-4 border-steel bg-concrete py-24 md:py-32">
-    <div class="container mx-auto px-6 lg:px-12">
-      <div class="mb-16 max-w-2xl text-center mx-auto">
-        <span class="mb-4 inline-block border-2 border-alert bg-alert px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">Por que nos escolher</span>
-        <h2 class="font-display text-5xl uppercase leading-[0.9] tracking-wide text-ink md:text-6xl">
+  <section class="border-b-4 border-steel bg-concrete py-16 md:py-24">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-12">
+      <div class="mb-12 max-w-2xl text-center mx-auto md:mb-16">
+        <span class="mb-3 inline-block border border-alert-600 bg-alert-700 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">Por que nos escolher</span>
+        <h2 class="font-display text-section uppercase leading-[0.92] tracking-wide break-safe text-ink sm:text-5xl md:text-6xl">
           Desentupidora 24h no Rio de Janeiro
         </h2>
-        <p class="mt-4 text-lg text-muted">
+        <p class="mt-4 text-base text-muted sm:text-lg">
           Atendimento de emergência em desentupimento de esgoto, pia, ralo, vaso sanitário, fossa e caixa de gordura.
         </p>
       </div>
 
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6">
         {differentials.map((item) => (
-          <div class="border-2 border-ink bg-white p-8 shadow-[6px_6px_0px_0px_rgba(10,22,40,1)]">
-            <div class="mb-5 flex h-14 w-14 items-center justify-center border-2 border-ink bg-signal text-ink" aria-hidden="true" set:html={item.svg} />
-            <h3 class="mb-3 font-display text-xl uppercase tracking-wide text-ink">{item.title}</h3>
+          <div class="border-2 border-ink bg-white p-5 shadow-[3px_3px_0px_0px_rgba(10,22,40,1)] sm:p-8">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center border-2 border-ink bg-signal text-ink sm:mb-5 sm:h-14 sm:w-14" aria-hidden="true" set:html={item.svg} />
+            <h3 class="mb-2 font-display text-lg uppercase tracking-wide text-ink sm:mb-3 sm:text-xl">{item.title}</h3>
             <p class="text-sm leading-relaxed text-muted">{item.description}</p>
           </div>
         ))}
@@ -68,68 +68,70 @@ const testimonials = [
   </section>
 
   <!-- Sobre Nós (resumo) -->
-  <section class="py-24 md:py-32">
-    <div class="container mx-auto px-6 lg:px-12">
-      <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
-        <div class="space-y-6">
-          <span class="inline-block border-2 border-alert bg-alert px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">Sobre nós</span>
-          <h2 class="font-display text-5xl uppercase leading-[0.9] tracking-wide text-ink md:text-6xl">
+  <section class="py-16 md:py-24">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-12">
+      <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+        <div class="space-y-5">
+          <span class="inline-block border border-alert-600 bg-alert-700 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">Sobre nós</span>
+          <h2 class="font-display text-section uppercase leading-[0.92] tracking-wide break-safe text-ink sm:text-5xl md:text-6xl">
             A desentupidora que o Rio de Janeiro confia
           </h2>
-          <p class="text-lg leading-relaxed text-muted">
+          <p class="text-base leading-relaxed text-muted sm:text-lg">
             A Desentupidora Rio de Janeiro une equipe treinada, equipamento moderno e
             atendimento humano. Sabemos que entupimento não avisa: por isso estamos
             prontos 24 horas para chegar até você, seja qual for a região da cidade.
           </p>
-          <p class="text-lg leading-relaxed text-muted">
+          <p class="text-base leading-relaxed text-muted sm:text-lg">
             Oferecemos desentupimento de esgoto, cano, pia, ralo, vaso sanitário,
             limpeza de fossa e caixa de gordura com preço justo e orçamento grátis.
             Atuamos em todas as regiões: Zona Norte, Zona Sul, Zona Oeste, Centro e
             Barra da Tijuca.
           </p>
-          <Button href="/quem-somos/" variant="outline-dark" size="lg">
-            Conheça nossa história
-          </Button>
-          <Button href="/perguntas-frequentes/" variant="outline-dark" size="lg">
-            Tire suas dúvidas
-          </Button>
+          <div class="flex flex-col gap-3 sm:flex-row">
+            <Button href="/quem-somos/" variant="outline-dark" size="lg">
+              Conheça nossa história
+            </Button>
+            <Button href="/perguntas-frequentes/" variant="outline-dark" size="lg">
+              Tire suas dúvidas
+            </Button>
+          </div>
         </div>
 
-        <div class="border-4 border-ink bg-signal p-10 shadow-[12px_12px_0px_0px_rgba(255,107,0,1)] md:p-12">
-          <div class="grid grid-cols-2 gap-8 text-center">
+        <div class="border-4 border-ink bg-signal p-6 shadow-[6px_6px_0px_0px_rgba(255,107,0,1)] sm:p-10 md:p-12">
+          <div class="grid grid-cols-2 gap-6 text-center sm:gap-8">
             <div>
-              <div class="font-display text-6xl uppercase leading-none text-ink">24h</div>
-              <div class="mt-2 text-sm font-bold uppercase tracking-wider text-ink/70">Atendimento</div>
+              <div class="font-display text-5xl uppercase leading-none text-ink sm:text-6xl">24h</div>
+              <div class="mt-2 text-xs font-bold uppercase tracking-wider text-ink">Atendimento</div>
             </div>
             <div>
-              <div class="font-display text-6xl uppercase leading-none text-ink">RJ</div>
-              <div class="mt-2 text-sm font-bold uppercase tracking-wider text-ink/70">Toda cidade</div>
+              <div class="font-display text-5xl uppercase leading-none text-ink sm:text-6xl">RJ</div>
+              <div class="mt-2 text-xs font-bold uppercase tracking-wider text-ink">Toda cidade</div>
             </div>
             <div>
-              <div class="font-display text-6xl uppercase leading-none text-alert">0</div>
-              <div class="mt-2 text-sm font-bold uppercase tracking-wider text-ink/70">Custo de visita*</div>
+              <div class="font-display text-5xl uppercase leading-none text-alert-700 sm:text-6xl">0</div>
+              <div class="mt-2 text-xs font-bold uppercase tracking-wider text-ink">Custo de visita*</div>
             </div>
             <div>
-              <div class="font-display text-6xl uppercase leading-none text-ink">100%</div>
-              <div class="mt-2 text-sm font-bold uppercase tracking-wider text-ink/70">Garantia</div>
+              <div class="font-display text-5xl uppercase leading-none text-ink sm:text-6xl">100%</div>
+              <div class="mt-2 text-xs font-bold uppercase tracking-wider text-ink">Garantia</div>
             </div>
           </div>
-          <p class="mt-8 text-center text-xs font-bold uppercase tracking-wide text-ink/60">*Orçamento e visita de avaliação sem custo. Valor cobrado apenas se executado.</p>
+          <p class="mt-6 text-center text-xs font-bold uppercase tracking-wide text-ink sm:mt-8">*Orçamento e visita de avaliação sem custo. Valor cobrado apenas se executado.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Serviços -->
-  <section id="servicos" class="border-y-4 border-steel bg-concrete py-24 md:py-32">
-    <div class="container mx-auto px-6 lg:px-12">
-      <div class="mb-16 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+  <section id="servicos" class="border-y-4 border-steel bg-concrete py-16 md:py-24">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-12">
+      <div class="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end md:mb-16">
         <div class="max-w-2xl">
-          <span class="mb-4 inline-block border-2 border-alert bg-alert px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">Nossos Serviços</span>
-          <h2 class="font-display text-5xl uppercase leading-[0.9] tracking-wide text-ink md:text-6xl">
+          <span class="mb-3 inline-block border border-alert-600 bg-alert-700 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">Nossos Serviços</span>
+          <h2 class="font-display text-section uppercase leading-[0.92] tracking-wide break-safe text-ink sm:text-5xl md:text-6xl">
             Serviços de desentupimento no Rio
           </h2>
-          <p class="mt-4 text-lg text-muted">
+          <p class="mt-4 text-base text-muted sm:text-lg">
             Do ralo entupido à fossa cheia, temos a solução certa para cada tipo de entupimento.
           </p>
         </div>
@@ -138,7 +140,7 @@ const testimonials = [
         </Button>
       </div>
 
-      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6">
         {services.map((service) => (
           <a href={`/servicos/${service.id.replace(/\.md$/, '').replace(/\//g, '-')}/`} class="block group">
             <ServiceCard
@@ -153,29 +155,29 @@ const testimonials = [
   </section>
 
   <!-- Depoimentos -->
-  <section class="py-24 md:py-32">
-    <div class="container mx-auto px-6 lg:px-12">
-      <div class="mb-16 max-w-2xl text-center mx-auto">
-        <span class="mb-4 inline-block border-2 border-alert bg-alert px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">Depoimentos</span>
-        <h2 class="font-display text-5xl uppercase leading-[0.9] tracking-wide text-ink md:text-6xl">
+  <section class="py-16 md:py-24">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-12">
+      <div class="mb-12 max-w-2xl text-center mx-auto md:mb-16">
+        <span class="mb-3 inline-block border border-alert-600 bg-alert-700 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">Depoimentos</span>
+        <h2 class="font-display text-section uppercase leading-[0.92] tracking-wide break-safe text-ink sm:text-5xl md:text-6xl">
           Quem já chamou nossa desentupidora
         </h2>
       </div>
 
-      <div class="grid gap-6 md:grid-cols-3">
+      <div class="grid gap-4 md:grid-cols-3 sm:gap-6">
         {testimonials.map((item) => (
-          <article class="border-2 border-ink bg-white p-8 shadow-[6px_6px_0px_0px_rgba(255,107,0,1)]">
-            <div class="mb-5 flex gap-1 text-signal" aria-hidden="true">
+          <article class="border-2 border-ink bg-white p-6 shadow-[3px_3px_0px_0px_rgba(255,107,0,1)] sm:p-8">
+            <div class="mb-4 flex gap-1 text-signal sm:mb-5" aria-hidden="true">
               {'★★★★★'.split('').map((star) => (
                 <span class="text-alert">{star}</span>
               ))}
             </div>
-            <blockquote class="mb-6 leading-relaxed text-muted">
+            <blockquote class="mb-5 text-sm leading-relaxed text-muted sm:mb-6 sm:text-base">
               "{item.text}"
             </blockquote>
-            <footer class="border-t-2 border-steel pt-5">
-              <div class="font-display text-lg uppercase tracking-wide text-ink">{item.name}</div>
-              <div class="text-sm font-bold uppercase tracking-wider text-muted">{item.location}</div>
+            <footer class="border-t-2 border-steel pt-4 sm:pt-5">
+              <div class="font-display text-base uppercase tracking-wide text-ink sm:text-lg">{item.name}</div>
+              <div class="text-xs font-bold uppercase tracking-wider text-muted">{item.location}</div>
             </footer>
           </article>
         ))}
@@ -184,17 +186,17 @@ const testimonials = [
   </section>
 
   <!-- Chamada de Contato -->
-  <section id="contato" class="py-24 md:py-32">
-    <div class="container mx-auto px-6 lg:px-12">
-      <div class="relative border-4 border-white bg-ink p-12 text-center text-white shadow-[12px_12px_0px_0px_rgba(255,107,0,1)] md:p-20">
-        <h2 class="font-display text-5xl uppercase leading-[0.9] tracking-wide md:text-7xl">
+  <section id="contato" class="py-16 md:py-24">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-12">
+      <div class="relative border-4 border-white bg-ink p-8 text-center text-white shadow-[6px_6px_0px_0px_rgba(255,107,0,1)] sm:p-12 md:p-20">
+        <h2 class="font-display text-section uppercase leading-[0.92] tracking-wide break-safe sm:text-5xl md:text-6xl lg:text-7xl">
           Precisa de uma desentupidora urgente?
         </h2>
-        <p class="mx-auto mt-6 max-w-2xl text-lg text-white/80">
+        <p class="mx-auto mt-5 max-w-2xl text-base text-white/80 sm:mt-6 sm:text-lg">
           Atendimento de desentupimento 24h em toda a cidade do Rio. Orçamento grátis,
           chegada rápida e garantia no serviço.
         </p>
-        <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4 md:mt-10">
           <Button href={whatsappLink()} variant="secondary" size="lg" target="_blank" rel="noopener noreferrer">
             Chamar no WhatsApp
           </Button>
