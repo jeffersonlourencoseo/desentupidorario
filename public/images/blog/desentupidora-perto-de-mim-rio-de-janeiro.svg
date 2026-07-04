@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f4c75"/>
+      <stop offset="100%" stop-color="#1e579b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <text x="60" y="100" font-family="Arial, sans-serif" font-size="28" fill="#92B9DD" font-weight="bold">DESENTUPIDORA RIO</text>
+  <text x="60" y="190" font-family="Arial, sans-serif" font-size="60" fill="white" font-weight="bold">Desentupidora</text>
+  <text x="60" y="270" font-family="Arial, sans-serif" font-size="60" fill="white" font-weight="bold">Perto de Mim</text>
+  <text x="60" y="450" font-family="Arial, sans-serif" font-size="28" fill="#ffffff">Atendimento 24h por (21) 99775-1577</text>
+  <text x="60" y="490" font-family="Arial, sans-serif" font-size="24" fill="#92B9DD">Orçamento grátis e sem compromisso</text>
+</svg>

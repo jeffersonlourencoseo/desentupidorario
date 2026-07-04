@@ -26,6 +26,7 @@ const relatedPosts = allPosts
   .slice(0, 3);
 
 const slug = Astro.params.slug;
+const ogImageUrl = post.data.ogImage ? `${SITE_CONFIG.domain}${post.data.ogImage}` : undefined;
 const breadcrumbs = [
   { name: 'Início', url: '/' },
   { name: 'Blog', url: '/blog/' },
@@ -36,6 +37,7 @@ const breadcrumbs = [
 <Layout
   title={post.data.title}
   description={post.data.description}
+  image={ogImageUrl}
   type="article"
   pubDate={post.data.pubDate}
   modDate={modDate}>
@@ -45,6 +47,7 @@ const breadcrumbs = [
     title={post.data.title}
     description={post.data.description}
     url={`${SITE_CONFIG.domain}/blog/${slug}/`}
+    image={ogImageUrl}
     pubDate={post.data.pubDate}
     modDate={modDate}
   />
