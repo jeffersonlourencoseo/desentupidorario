@@ -10,7 +10,7 @@ interface Props {
   modDate?: Date;
 }
 
-const { title, description, url, image = `${SITE_CONFIG.domain}/og-image.svg`, pubDate, modDate } = Astro.props;
+const { title, description, url, image = `${SITE_CONFIG.domain}/og-image.svg`, pubDate, modDate, author: authorName } = Astro.props;
 
 const dateIso = (d: Date) => d.toISOString();
 
@@ -23,11 +23,13 @@ const schema = {
   url,
   datePublished: dateIso(pubDate),
   dateModified: dateIso(modDate || pubDate),
-  author: {
-    '@type': 'Organization',
-    name: SITE_CONFIG.legalName,
-    url: SITE_CONFIG.domain,
-  },
+  author: authorName
+    ? { '@type': 'Person', name: authorName }
+    : {
+        '@type': 'Organization',
+        name: SITE_CONFIG.legalName,
+        url: SITE_CONFIG.domain,
+      },
   publisher: {
     '@type': 'Organization',
     name: SITE_CONFIG.legalName,

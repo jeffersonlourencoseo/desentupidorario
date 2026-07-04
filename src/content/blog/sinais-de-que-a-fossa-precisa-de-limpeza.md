@@ -5,7 +5,7 @@ keyword: "desentupidora de fossa no rio de janeiro"
 pubDate: 2026-07-04
 updatedDate: 2026-07-04
 tags: ["desentupidora de fossa no rio de janeiro", "sinais fossa cheia", "limpeza de fossa RJ", "desentupidora 24h"]
-author: "Equipe Desentupidora Rio"
+author: "Técnico em Desentupimento — Equipe Desentupidora Rio"
 ogImage: "/images/blog/sinais-de-que-a-fossa-precisa-de-limpeza.svg"
 coverImage: "/images/blog/sinais-de-que-a-fossa-precisa-de-limpeza.svg"
 ---

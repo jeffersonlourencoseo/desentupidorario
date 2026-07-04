@@ -5,7 +5,7 @@ keyword: "preço desentupidora Rio de Janeiro"
 pubDate: 2026-07-04
 updatedDate: 2026-07-04
 tags: ["preço desentupidora Rio de Janeiro", "custo desentupidora RJ", "orçamento desentupidora", "desentupimento 24h"]
-author: "Equipe Desentupidora Rio"
+author: "Técnico em Desentupimento — Equipe Desentupidora Rio"
 ogImage: "/images/blog/quanto-custa-desentupidora-rio-de-janeiro-2026.svg"
 coverImage: "/images/blog/quanto-custa-desentupidora-rio-de-janeiro-2026.svg"
 ---

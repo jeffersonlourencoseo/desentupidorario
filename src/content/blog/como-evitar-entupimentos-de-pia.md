@@ -5,7 +5,7 @@ keyword: "desentupidora de pia no rio de janeiro"
 pubDate: 2026-07-04
 updatedDate: 2026-07-04
 tags: ["desentupidora de pia no rio de janeiro", "evitar entupimento de pia", "desentupimento de pia RJ", "manutenção de pia"]
-author: "Equipe Desentupidora Rio"
+author: "Técnico em Desentupimento — Equipe Desentupidora Rio"
 ogImage: "/images/blog/como-evitar-entupimentos-de-pia.svg"
 coverImage: "/images/blog/como-evitar-entupimentos-de-pia.svg"
 ---

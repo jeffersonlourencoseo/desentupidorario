@@ -5,7 +5,7 @@ keyword: "desentupidora de fossa"
 pubDate: 2026-07-04
 updatedDate: 2026-07-04
 tags: ["desentupidora de fossa", "limpeza de fossa Rio de Janeiro", "preço limpeza de fossa", "frequência fossa séptica", "sinais fossa cheia"]
-author: "Equipe Desentupidora Rio"
+author: "Técnico em Desentupimento — Equipe Desentupidora Rio"
 ogImage: "/images/blog/limpeza-fossa-rio-de-janeiro.svg"
 coverImage: "/images/blog/limpeza-fossa-rio-de-janeiro.svg"
 ---

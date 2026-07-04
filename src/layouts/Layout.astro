@@ -15,6 +15,7 @@ interface Props {
   pubDate?: Date;
   modDate?: Date;
   noindex?: boolean;
+  author?: string;
 }
 
 const {
@@ -25,13 +26,14 @@ const {
   pubDate,
   modDate,
   noindex,
+  author,
 } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <SEO title={title} description={description} image={image} type={type} pubDate={pubDate} modDate={modDate} noindex={noindex} />
+    <SEO title={title} description={description} image={image} type={type} pubDate={pubDate} modDate={modDate} noindex={noindex} author={author} />
     <SchemaWebSite />
     <SchemaLocalBusiness />
   </head>

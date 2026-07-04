@@ -5,7 +5,7 @@ keyword: "desentupidora de vaso sanitário"
 pubDate: 2026-07-04
 updatedDate: 2026-07-04
 tags: ["desentupidora de vaso sanitário", "desentupimento de vaso sanitário", "vaso sanitário entupido RJ", "desentupidora 24h Rio de Janeiro", "preço desentupidora vaso sanitário"]
-author: "Equipe Desentupidora Rio"
+author: "Técnico em Desentupimento — Equipe Desentupidora Rio"
 ogImage: "/images/blog/desentupidora-vaso-sanitario-rio-de-janeiro.svg"
 coverImage: "/images/blog/desentupidora-vaso-sanitario-rio-de-janeiro.svg"
 ---

@@ -5,7 +5,7 @@ keyword: "desentupidora perto de mim"
 pubDate: 2026-07-04
 updatedDate: 2026-07-04
 tags: ["desentupidora perto de mim", "desentupidora 24h Rio de Janeiro", "desentupidora Zona Norte", "desentupidora Zona Sul", "atendimento desentupidora RJ"]
-author: "Equipe Desentupidora Rio"
+author: "Técnico em Desentupimento — Equipe Desentupidora Rio"
 ogImage: "/images/blog/desentupidora-perto-de-mim-rio-de-janeiro.svg"
 coverImage: "/images/blog/desentupidora-perto-de-mim-rio-de-janeiro.svg"
 ---

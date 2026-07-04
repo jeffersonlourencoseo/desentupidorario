@@ -40,7 +40,8 @@ const breadcrumbs = [
   image={ogImageUrl}
   type="article"
   pubDate={post.data.pubDate}
-  modDate={modDate}>
+  modDate={modDate}
+  author={post.data.author}>
 
   <SchemaBreadcrumbs items={breadcrumbs} />
   <SchemaArticle
@@ -50,6 +51,7 @@ const breadcrumbs = [
     image={ogImageUrl}
     pubDate={post.data.pubDate}
     modDate={modDate}
+    author={post.data.author}
   />
   <Breadcrumbs items={breadcrumbs} />
 
@@ -73,9 +75,23 @@ const breadcrumbs = [
           <h1 class="mb-6 font-display text-page font-extrabold leading-tight break-safe text-text md:text-5xl">
             {post.data.title}
           </h1>
-          <p class="mb-12 text-xl leading-relaxed text-muted">
+          <p class="mb-8 text-xl leading-relaxed text-muted">
             {post.data.description}
           </p>
+
+          {post.data.coverImage && (
+            <figure class="mb-12 overflow-hidden border-2 border-steel shadow-[8px_8px_0px_0px_rgba(217,92,30,1)]">
+              <img
+                src={post.data.coverImage}
+                alt={`Imagem de destaque: ${post.data.title}`}
+                width="1200"
+                height="630"
+                loading="eager"
+                decoding="async"
+                class="h-auto w-full"
+              />
+            </figure>
+          )}
 
           <div class="prose prose-lg max-w-none prose-headings:font-display prose-headings:text-text prose-a:text-alert-700 hover:prose-a:text-alert-900">
             <Content />

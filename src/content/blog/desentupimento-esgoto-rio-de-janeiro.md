@@ -5,7 +5,7 @@ keyword: "desentupidora de esgoto"
 pubDate: 2026-07-04
 updatedDate: 2026-07-04
 tags: ["desentupidora de esgoto", "desentupimento de esgoto RJ", "esgoto entupido Rio de Janeiro", "preço desentupidora esgoto", "desentupidora 24h"]
-author: "Equipe Desentupidora Rio"
+author: "Técnico em Desentupimento — Equipe Desentupidora Rio"
 ogImage: "/images/blog/desentupimento-esgoto-rio-de-janeiro.svg"
 coverImage: "/images/blog/desentupimento-esgoto-rio-de-janeiro.svg"
 ---

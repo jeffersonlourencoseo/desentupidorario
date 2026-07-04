@@ -5,7 +5,7 @@ keyword: "desentupidora 24 horas"
 pubDate: 2026-07-04
 updatedDate: 2026-07-04
 tags: ["desentupidora 24 horas", "desentupidora emergencial RJ", "desentupidora 24h Rio de Janeiro", "atendimento desentupidora"]
-author: "Equipe Desentupidora Rio"
+author: "Técnico em Desentupimento — Equipe Desentupidora Rio"
 ogImage: "/images/blog/desentupidora-24-horas-rio-de-janeiro.svg"
 coverImage: "/images/blog/desentupidora-24-horas-rio-de-janeiro.svg"
 ---
