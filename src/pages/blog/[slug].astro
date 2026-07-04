@@ -51,7 +51,9 @@ const breadcrumbs = [
           </a>
 
           <span class="mb-3 block text-sm font-bold tracking-wider text-alert uppercase">
-            {post.data.pubDate.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}
+            Publicado em {post.data.pubDate.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}
+            <span class="mx-2 text-muted">•</span>
+            Atualizado em {new Date().toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}
           </span>
           <h1 class="mb-6 font-display text-4xl font-extrabold leading-tight text-text md:text-5xl">
             {post.data.title}
@@ -64,8 +66,16 @@ const breadcrumbs = [
             <Content />
           </div>
 
-          <div class="mt-12 border-4 border-white bg-ink p-10 text-center text-white shadow-[12px_12px_0px_0px_rgba(217,92,30,1)]">
-            <h2 class="mb-4 font-display text-2xl font-bold">Precisa de uma desentupidora no Rio de Janeiro?</h2>
+          <div class="mt-12 border-2 border-steel bg-concrete p-8">
+            <p class="text-sm text-muted">
+              <strong class="text-ink">Sobre o conteúdo:</strong> Este artigo foi produzido pela equipe técnica da
+              Desentupidora Rio de Janeiro com base em anos de experiência em atendimento de
+              emergências de entupimento na cidade. As informações são atualizadas regularmente.
+            </p>
+          </div>
+
+          <div class="mt-8 border-4 border-white bg-ink p-10 text-center text-white shadow-[12px_12px_0px_0px_rgba(217,92,30,1)]">
+            <h2 class="mb-4 font-display text-2xl font-bold">Precisa de uma desentupidora no Rio?</h2>
             <p class="mb-8 text-white/70">Atendimento 24h por WhatsApp. Orçamento grátis e chegada rápida.</p>
             <Button href={whatsappLink()} variant="accent" size="lg" target="_blank" rel="noopener noreferrer">
               Chamar no WhatsApp

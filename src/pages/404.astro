@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import { whatsappLink } from '../data/config.ts';
+---
+
+<Layout
+  title="Página não encontrada"
+  description="A página que você procura não foi encontrada. Volte para a home ou fale com a Desentupidora Rio de Janeiro pelo WhatsApp."
+  noindex={true}>
+
+  <section class="py-24 md:py-32">
+    <div class="container mx-auto px-6 lg:px-12">
+      <div class="mx-auto max-w-3xl text-center">
+        <span class="mb-6 inline-block border-2 border-alert bg-alert px-4 py-2 text-sm font-bold uppercase tracking-wider text-white">
+          Erro 404
+        </span>
+        <h1 class="font-display text-6xl uppercase leading-[0.9] tracking-wide text-ink md:text-8xl">
+          Página não encontrada
+        </h1>
+        <p class="mt-6 text-lg leading-relaxed text-muted md:text-xl">
+          O endereço que você digitou pode estar errado ou a página foi movida.
+          Não se preocupe: você pode voltar para a home ou chamar nossa desentupidora no Rio de Janeiro.
+        </p>
+
+        <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <Button href="/" variant="primary" size="lg">
+            Voltar para a home
+          </Button>
+          <Button href={whatsappLink()} variant="secondary" size="lg" target="_blank" rel="noopener noreferrer">
+            Chamar no WhatsApp
+          </Button>
+        </div>
+
+        <div class="mt-16 border-2 border-steel bg-concrete p-8 text-left shadow-[6px_6px_0px_0px_rgba(225,231,236,1)]">
+          <h2 class="mb-4 font-display text-xl uppercase tracking-wide text-ink">
+            O que você procura?
+          </h2>
+          <ul class="space-y-3 text-muted">
+            <li>
+              <a href="/servicos/" class="font-semibold text-alert hover:text-alert-600 hover:underline">
+                Serviços de desentupimento
+              </a>
+              — esgoto, pia, ralo, vaso sanitário, fossa e caixa de gordura.
+            </li>
+            <li>
+              <a href="/perguntas-frequentes/" class="font-semibold text-alert hover:text-alert-600 hover:underline">
+                Perguntas frequentes
+              </a>
+              — preço, garantia, atendimento 24h e bairros.
+            </li>
+            <li>
+              <a href="/contato/" class="font-semibold text-alert hover:text-alert-600 hover:underline">
+                Fale conosco
+              </a>
+              — WhatsApp, telefone e endereço.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
