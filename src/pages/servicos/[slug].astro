@@ -82,7 +82,9 @@ const breadcrumbs = [
 
         <!-- Especificações técnicas -->
         <div class="mt-16 border-2 border-steel bg-white p-10 shadow-[6px_6px_0px_0px_rgba(225,231,236,1)]">
-          <h2 class="mb-8 font-display text-2xl font-bold text-text">Como funciona o atendimento</h2>
+          <h2 class="mb-8 font-display text-2xl font-bold text-text">
+            Como funciona o {serviceName.toLowerCase()}
+          </h2>
           <div class="grid gap-8 md:grid-cols-3">
             <div class="space-y-3">
               <div class="flex h-12 w-12 items-center justify-center border-2 border-steel bg-concrete font-display text-xl font-bold text-ink">1</div>
@@ -105,7 +107,7 @@ const breadcrumbs = [
         <!-- Benefícios -->
         <div class="mt-16 border-2 border-steel bg-concrete p-10">
           <h2 class="mb-8 font-display text-2xl font-bold text-text">
-            Por que contratar a Desentupidora Rio de Janeiro para {shortName.toLowerCase()}?
+            Benefícios do {serviceName.toLowerCase()} com garantia
           </h2>
           <ul class="grid gap-4 md:grid-cols-2">
             <li class="flex items-start gap-3 text-muted">
@@ -135,6 +137,24 @@ const breadcrumbs = [
           </ul>
         </div>
 
+        <!-- Regiões atendidas -->
+        <div class="mt-16 border-2 border-steel bg-white p-10 shadow-[6px_6px_0px_0px_rgba(225,231,236,1)]">
+          <h2 class="mb-6 font-display text-2xl font-bold text-text">
+            {serviceName} em todas as regiões do Rio
+          </h2>
+          <p class="mb-6 text-muted">
+            Atendemos Zona Norte, Zona Sul, Zona Oeste, Centro, Tijuca, Copacabana,
+            Barra da Tijuca, Madureira, Campo Grande e todos os bairros do Rio de Janeiro.
+            Onde você estiver, levamos uma equipe com equipamento profissional.
+          </p>
+          <a href="/contato/" class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-alert transition-colors hover:text-alert-600">
+            Ver canais de atendimento
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+
         <!-- Serviços relacionados -->
         {relatedServices.length > 0 && (
           <div class="mt-16 border-2 border-steel bg-white p-10 shadow-[6px_6px_0px_0px_rgba(225,231,236,1)]">
@@ -155,7 +175,7 @@ const breadcrumbs = [
         <!-- CTA de fechamento -->
         <div class="mt-16 border-4 border-white bg-ink p-12 text-center text-white shadow-[12px_12px_0px_0px_rgba(217,92,30,1)] md:p-16">
           <h2 class="mb-4 font-display text-3xl font-bold md:text-4xl">
-            Precisa de {serviceName.toLowerCase()}?
+            Solicite {serviceName.toLowerCase()} agora
           </h2>
           <p class="mx-auto mb-8 max-w-2xl text-lg text-white/70">
             Fale conosco agora e receba atendimento 24h no Rio de Janeiro. Orçamento grátis,
