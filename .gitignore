@@ -33,3 +33,6 @@ Thumbs.db
 /coverage/
 
 .vercel
+
+# Relatórios Lighthouse
+lighthouse*.json
