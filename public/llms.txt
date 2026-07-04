@@ -1,3 +1,12 @@
+> **Name:** Desentupidora Rio de Janeiro
+> **Description:** Empresa de desentupimento e limpeza de fossa com atendimento 24h em toda a cidade do Rio de Janeiro. Orçamento grátis e sem compromisso.
+> **Base URL:** https://desentupidorario.vercel.app
+> **Contact:** (21) 99775-1577 (WhatsApp/Telefone), contato@desentupidorario.com.br
+> **Address:** Av. Brasil, 10946 — Penha, Rio de Janeiro - RJ, 21012-350
+> **Language:** pt-BR
+> **Last Updated:** 2026-07-04
+> **Full-text:** https://desentupidorario.vercel.app/llms-full.txt
+
 # Desentupidora Rio de Janeiro — llms.txt
 
 ## Visão geral
